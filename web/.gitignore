@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 
+#yarn
+.yarn/*
+.yarn.lock
+
 # testing
 /coverage
 
@@ -33,9 +37,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# yarn v3
-.yarn
-.yarnrc.yml
-.yarnignore
-
