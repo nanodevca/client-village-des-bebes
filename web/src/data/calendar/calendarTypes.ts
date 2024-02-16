@@ -17,4 +17,4 @@ const calendarTypes: Options["calendars"] = [
   },
 ];
 
-export { calendarTypes }
+export { calendarTypes };

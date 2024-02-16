@@ -1,5 +1,4 @@
 "use client";
-
 import { useCallback, useEffect, useRef, useState } from "react";
 import "@toast-ui/calendar/dist/toastui-calendar.min.css";
 import Calendar from "@toast-ui/react-calendar";
@@ -9,7 +8,6 @@ import {
   ArrowRightCircleIcon,
   CalendarIcon,
 } from "@heroicons/react/20/solid";
-import { ExternalEventTypes } from "@toast-ui/calendar/dist/toastui-calendar.min.css";
 import { calendarTypes } from "@/src/data/calendar/calendarTypes";
 import { calendarEvents } from "@/src/data/calendar/calendarEvents";
 import { calendarViewModeOptions } from "@/src/data/calendar/calendarViews";
@@ -18,7 +16,7 @@ type ViewType = "month" | "week" | "day";
 type actionNameType = "today" | "prev" | "next";
 
 const CalendarView = ({ view }: { view: ViewType }) => {
-  const calendarRef = useRef<typeof Calendar>(null);
+  const calendarRef = useRef<typeof Calendar | any>(null);
   const [selectedDateRangeText, setSelectedDateRangeText] = useState("");
   const [selectedView, setSelectedView] = useState(view);
 
@@ -49,7 +47,6 @@ const CalendarView = ({ view }: { view: ViewType }) => {
             month: "long",
           }
         ).format(calDate);
-        console.log(dateRangeText);
         break;
       }
       case "week": {
@@ -68,7 +65,6 @@ const CalendarView = ({ view }: { view: ViewType }) => {
             day: "numeric",
           }
         ).format(rangeEnd)}`;
-        console.log(dateRangeText);
         break;
       }
       default: {
@@ -184,6 +180,7 @@ const CalendarView = ({ view }: { view: ViewType }) => {
         }}
         theme={theme}
         useDetailPopup={true}
+        // @ts-ignore
         useDetailSidebar={true}
         taskView={true}
         view={selectedView}
