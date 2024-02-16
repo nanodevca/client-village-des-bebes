@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Navbarwrapper } from "../components/navbar/index";
-import Footer from "../components/Footer/Footer";
+import Footer from "../components/footer";
 
 export const metadata = {
   title: "Le village des bébés",

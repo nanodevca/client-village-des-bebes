@@ -54,7 +54,7 @@ const Drawer = ({ isOpen, setIsOpen }: DrawerType) => {
                             href={item.href}
                             className={`${
                               item.current
-                                ? "text-blue font-semibold"
+                                ? "text-pictonblue font-semibold"
                                 : "font-normal"
                             }`}
                             aria-current={item.current ? "page" : undefined}
