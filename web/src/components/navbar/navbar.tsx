@@ -45,8 +45,8 @@ const Navbar = () => {
                         aria-current={item.href ? "page" : undefined}
                         className={`${
                           item.current
-                            ? "text-blue font-semibold"
-                            : "hover:text-blue hover:font-semibold font-normal"
+                            ? "text-pictonblue font-semibold"
+                            : "hover:text-pictonblue hover:font-semibold font-normal"
                         } ${
                           item.children ? "menu-hover" : ""
                         } px-3 py-2 text-lg space-links flex items-center justify-center`}
@@ -68,7 +68,7 @@ const Navbar = () => {
                             <Link
                               key={x}
                               href={child.href}
-                              className="flex items-start px-6 py-4 hover:bg-blue hover:text-white hover:font-semibold space-links"
+                              className="flex items-start px-6 py-4 hover:bg-pictonblue hover:text-white hover:font-semibold space-links"
                               aria-current={child.href ? "page" : undefined}
                               role="menuitem"
                             >
