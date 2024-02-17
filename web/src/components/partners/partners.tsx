@@ -109,8 +109,8 @@ const Partners = () => {
                 src={item.image}
                 alt={item.description}
                 className="object-contain h-full w-full"
-                width={130}
-                height={130}
+                width={1000}
+                height={1000}
               />
             </div>
           ))}
