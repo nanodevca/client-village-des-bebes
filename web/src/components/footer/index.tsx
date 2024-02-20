@@ -20,13 +20,25 @@ const footer = () => {
         <div className="px-5 py-12 mx-auto max-w-7xl lg:py-16 md:px-12 lg:px-20">
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
             <div className="space-y-0 xl:col-span-1">
-              <Image
-                src={"/assets/images/company/logo.png"}
-                width={500}
-                height={500}
-                className="w-28 object-contain"
-                alt="le-village-des-bebes"
-              />
+              <div className="w-full flex justify-between items-center">
+                <Image
+                  src={"/assets/images/company/logo.png"}
+                  width={500}
+                  height={500}
+                  className="w-28 object-contain"
+                  alt="le-village-des-bebes"
+                />
+                <Image
+                  src={
+                    "/assets/images/company/sceau-defiOSEntreprendre-laureat-regional-2023.png"
+                  }
+                  width={500}
+                  height={500}
+                  className="w-20 h-20 object-contain"
+                  alt="projet laureat regional 2023 defi OS entreprendre"
+                  title="Projet laureat regional 2023 defi OS entreprendre"
+                />
+              </div>
               <div className="w-1/2 text-sm text-gray-500">
                 <div className="flex gap-2">
                   <MapPinIcon className="h-5 w-5 text-offwhite" />

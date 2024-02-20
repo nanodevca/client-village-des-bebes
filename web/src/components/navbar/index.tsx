@@ -24,6 +24,7 @@ const Navbarwrapper = () => {
       document.removeEventListener("scroll", storeScroll);
     };
   }, []);
+
   return (
     <>
       <Navbar />
