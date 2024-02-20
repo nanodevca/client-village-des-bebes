@@ -1,4 +1,4 @@
-import "./globals.css";
+import "../css/globals.css";
 import { Navbarwrapper } from "../components/navbar/index";
 import Footer from "../components/footer";
 import dynamic from "next/dynamic";

@@ -2,44 +2,11 @@
 
 import { NavigationItemType } from "../types/navLinks";
 
-const isCurrent = (href: string) => {
-  if (typeof window === "undefined") return false;
-  return (
-    href.split("/")[1] === window.location.pathname.split("/")[1] ||
-    href === "/"
-  );
-};
-
 const navigation: NavigationItemType[] = [
-  { name: "Acceuil", href: "/", current: true },
-  {
-    name: "L'organisation",
-    href: "/organisation",
-    current: isCurrent("/organisation"),
-    children: [
-      {
-        name: "Qui sommes nous ?",
-        href: "/organisation/who-we-are",
-      },
-      {
-        name: "Les fondatrices et l'histoire",
-        href: "/organisation/founders",
-      },
-      {
-        name: "Conseil d'administration",
-        href: "/organisation/board-of-directors",
-      },
-      { name: "L'équipe", href: "/organisation/team", current: false },
-      {
-        name: "Rapport annuel",
-        href: "/organisation/annual-reports",
-      },
-    ],
-  },
+  { name: "Acceuil", href: "/" },
   {
     name: "Activités et Services",
     href: "/services",
-    current: isCurrent("/services"),
     children: [
       {
         name: "Ateliers prénataux",
@@ -79,11 +46,9 @@ const navigation: NavigationItemType[] = [
       },
     ],
   },
-  { name: "Photos souvenirs", href: "/photos", current: isCurrent("/photos") },
   {
     name: "Professionnels",
     href: "/professionals",
-    current: isCurrent("/professionals"),
     children: [
       {
         name: "Je suis parent",
@@ -95,7 +60,33 @@ const navigation: NavigationItemType[] = [
       },
     ],
   },
-  { name: "Contact", href: "/contact", current: isCurrent("/contact") },
+  {
+    name: "L'organisation",
+    href: "/organization",
+    children: [
+      {
+        name: "Qui sommes nous ?",
+        href: "/organization/who-we-are",
+      },
+      {
+        name: "Les fondatrices et l'histoire",
+        href: "/organization/founders",
+      },
+      {
+        name: "Conseil d'administration",
+        href: "/organization/board-of-directors",
+      },
+      { name: "L'équipe", href: "/organization/team" },
+      {
+        name: "Rapport annuel",
+        href: "/organization/annual-reports",
+      },
+    ],
+  },
+  { name: "Photos souvenirs", href: "/photos" },
+  { name: "Contact", href: "/contact" },
 ];
 
-export { navigation };
+const altLinks = [{ name: "Acceuil", href: "/home" }];
+
+export { navigation, altLinks };

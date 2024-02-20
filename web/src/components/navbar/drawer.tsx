@@ -3,8 +3,34 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { navigation } from "@/src/navigation/navigation";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { useEffect, useState } from "react";
 
 const Drawer = ({ isOpen, setIsOpen }: DrawerType) => {
+  const [currentPage, setCurrentPage] = useState<string>("");
+
+  const linksStructure = (): { [key: string]: string[] } => {
+    let links = {};
+    navigation.map((item, x) => {
+      links = {
+        ...links,
+        [item.href]: item.children
+          ? item.children.map((child, x) => child.href)
+          : [],
+      };
+    });
+
+    return links;
+  };
+
+  const updateCurrentPage = (href: string) => {
+    setCurrentPage(href);
+    setIsOpen(false);
+  };
+
+  useEffect(() => {
+    setCurrentPage(window.location.pathname);
+  }, []);
+
   return (
     <main
       className={`fixed overflow-hidden z-10 bg-gray-900 bg-opacity-25 inset-0 transform ease-in-out
@@ -22,10 +48,10 @@ const Drawer = ({ isOpen, setIsOpen }: DrawerType) => {
         <article className="relative w-270 max-w-lg flex flex-col h-full">
           <header className="px-5 flex items-center justify-between">
             <Image
-              className="block h-24 w-28 lg:hidden"
+              className="block h-28 w-28 lg:hidden"
               src={"/assets/images/company/logo.png"}
               width={112}
-              height={96}
+              height={112}
               alt="le-village-des-bebes"
             />
             <XMarkIcon
@@ -52,12 +78,14 @@ const Drawer = ({ isOpen, setIsOpen }: DrawerType) => {
                           <Link
                             key={x}
                             href={item.href}
+                            onClick={() => updateCurrentPage(item.href)}
                             className={`${
-                              item.current
+                              currentPage === item.href ||
+                              linksStructure()[item.href].includes(currentPage)
                                 ? "text-pictonblue font-semibold"
                                 : "font-normal"
                             }`}
-                            aria-current={item.current ? "page" : undefined}
+                            aria-current={item.href ? "page" : undefined}
                           >
                             {item.name}
                           </Link>{" "}
@@ -76,6 +104,7 @@ const Drawer = ({ isOpen, setIsOpen }: DrawerType) => {
                             {item.children.map((item, x) => (
                               <Link
                                 key={x}
+                                onClick={() => updateCurrentPage(item.href)}
                                 href={item.href}
                                 className="flex items-center h-8 px-4 text-sm hover:bg-gray-200"
                                 aria-current={item.href ? "page" : undefined}

@@ -107,7 +107,7 @@ const CalendarView = ({ view }: { view: ViewType }) => {
             name="select-view"
             defaultValue={view}
             onChange={(e) => onChangeSelect(e.target.value as ViewType)}
-            className="rounded-lg w-56 h-12 bg-lilywhite border-2 border-black text-center text-lg font-semibold"
+            className="rounded-lg w-56 h-12 bg-lilywhite text-center text-lg font-semibold"
           >
             {calendarViewModeOptions.map((option) => (
               <option key={option.value} value={option.value}>
@@ -122,10 +122,9 @@ const CalendarView = ({ view }: { view: ViewType }) => {
               data-action="move-prev"
               style={{ marginInline: "5px" }}
               onClick={() => onClickNavi("prev")}
-              className="rounded-lg w-44 h-12 bg-lilywhite text-center text-lg font-semibold text-darkblue flex items-center justify-center"
+              className="rounded-lg w-20 h-12 bg-lilywhite text-center text-lg font-semibold text-darkblue flex items-center justify-center"
             >
               <ArrowLeftCircleIcon className="w-6 h-6 mr-2" />
-              Précédent
             </button>
             <button
               type="button"
@@ -135,7 +134,7 @@ const CalendarView = ({ view }: { view: ViewType }) => {
               className="rounded-lg w-44 h-12 bg-lilywhite text-center text-lg font-semibold text-darkblue flex items-center justify-center"
             >
               <CalendarIcon className="w-6 h-6 mr-2" />
-              Today
+              Aujourd&apos;hui
             </button>
 
             <button
@@ -143,9 +142,8 @@ const CalendarView = ({ view }: { view: ViewType }) => {
               style={{ marginInline: "5px" }}
               data-action="move-next"
               onClick={() => onClickNavi("next")}
-              className="rounded-lg w-44 h-12 bg-lilywhite text-center text-lg font-semibold text-darkblue flex items-center justify-center"
+              className="rounded-lg w-20 h-12 bg-lilywhite text-center text-lg font-semibold text-darkblue flex items-center justify-center"
             >
-              Next
               <ArrowRightCircleIcon className="w-6 h-6 ml-2" />
             </button>
           </span>

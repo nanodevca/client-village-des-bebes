@@ -2,13 +2,36 @@
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import Drawer from "./drawer";
 import Image from "next/image";
 import { navigation } from "@/src/navigation/navigation";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState<boolean>(false);
+  const [currentPage, setCurrentPage] = React.useState<string>("");
+
+  const linksStructure = (): { [key: string]: string[] } => {
+    let links = {};
+    navigation.map((item, x) => {
+      links = {
+        ...links,
+        [item.href]: item.children
+          ? item.children.map((child, x) => child.href)
+          : [],
+      };
+    });
+
+    return links;
+  };
+
+  const updateCurrentPage = (href: string) => {
+    setCurrentPage(href);
+  };
+
+  useEffect(() => {
+    setCurrentPage(window.location.pathname);
+  }, []);
 
   return (
     <Disclosure as="nav" className="navbar">
@@ -43,8 +66,10 @@ const Navbar = () => {
                         key={x}
                         href={item.href}
                         aria-current={item.href ? "page" : undefined}
+                        onClick={() => updateCurrentPage(item.href)}
                         className={`${
-                          item.current
+                          currentPage === item.href ||
+                          linksStructure()[item.href].includes(currentPage)
                             ? "text-pictonblue font-semibold"
                             : "hover:text-pictonblue hover:font-semibold font-normal"
                         } ${
@@ -68,7 +93,8 @@ const Navbar = () => {
                             <Link
                               key={x}
                               href={child.href}
-                              className="flex items-start px-6 py-4 hover:bg-pictonblue hover:text-white hover:font-semibold space-links"
+                              onClick={() => updateCurrentPage(item.href)}
+                              className="flex items-start px-6 py-4 hover:bg-pictonblue hover:font-semibold space-links"
                               aria-current={child.href ? "page" : undefined}
                               role="menuitem"
                             >
