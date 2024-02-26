@@ -65,18 +65,9 @@ const navigation: NavigationItemType[] = [
     href: "/organization",
     children: [
       {
-        name: "Qui sommes nous ?",
-        href: "/organization/who-we-are",
+        name: "A propos de nous",
+        href: "/organization/about-us",
       },
-      {
-        name: "Les fondatrices et l'histoire",
-        href: "/organization/founders",
-      },
-      {
-        name: "Conseil d'administration",
-        href: "/organization/board-of-directors",
-      },
-      { name: "L'équipe", href: "/organization/team" },
       {
         name: "Rapport annuel",
         href: "/organization/annual-reports",

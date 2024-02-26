@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "L'organisation",
+    default: "A propos",
     template: "%s | LVDB",
   },
 };
