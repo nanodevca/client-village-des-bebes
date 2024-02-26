@@ -43,8 +43,8 @@ const AboutUsContent = () => {
               Notre histoire
             </h2>
             <p className="mb-3 text-gray-500">
-              L'histoire inspirante du Village des Bébés trouve ses racines dans
-              le parcours personnel de <b>Nathalie Khadija Pesin</b>, une
+              L&apos;histoire inspirante du Village des Bébés trouve ses racines
+              dans le parcours personnel de <b>Nathalie Khadija Pesin</b>, une
               entrepreneure passionnée et engagée. Née au Sénégal, Nathalie a
               été témoin des nombreuses initiatives de sa mère,{" "}
               <b>Fatou-Marie Ndiaye</b>, spécialiste en économie sociale et
@@ -53,7 +53,7 @@ const AboutUsContent = () => {
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
               <p className="mb-3 text-gray-500">
                 C&apos;est lorsque je suis devenue maman que l&apos;idée du
-                village des bébé a commencé à prendre forme. En effet, j'ai
+                village des bébé a commencé à prendre forme. En effet, j&apos;ai
                 ressenti le désir de transmettre ma culture africaine à ma fille
                 dès son plus jeune âge. <br />
                 Ma mère, comme directrice de garderie au Sénégal, organisait
@@ -80,28 +80,30 @@ const AboutUsContent = () => {
                 <br />
                 Fortes de notre expérience internationale, notamment en France
                 et au Sénégal, nous sommes fières de notre engagement à
-                l'échelle mondiale. Ma mère, forte de plus de 20 ans d'expertise
-                en économie sociale et familiale, a joué un rôle clé dans la
-                création du Village des Bébés. Reconnue pour son leadership et
-                ses valeurs humaines, elle a œuvré en France dans le secteur de
-                la petite enfance et a ouvert la première crèche-garderie au
-                Sénégal. Ma mère a contribué significativement au secteur de la
-                petite enfance, tandis que j'ai été reconnue pour mon leadership
-                au sein de la communauté sénégalaise au Canada.
+                l&apos;échelle mondiale. Ma mère, forte de plus de 20 ans
+                d&apos;expertise en économie sociale et familiale, a joué un
+                rôle clé dans la création du Village des Bébés. Reconnue pour
+                son leadership et ses valeurs humaines, elle a œuvré en France
+                dans le secteur de la petite enfance et a ouvert la première
+                crèche-garderie au Sénégal. Ma mère a contribué
+                significativement au secteur de la petite enfance, tandis que
+                j&apos;ai été reconnue pour mon leadership au sein de la
+                communauté sénégalaise au Canada.
               </p>
               <p className="mb-3 text-gray-500">
-                Le Village des Bébés n'est pas seulement un projet, c'est une
-                communauté dynamique qui s'est formée naturellement. Grâce à
-                l'implication de chacun, le projet évolue constamment, reflétant
-                l'essence même de la solidarité et de l'entraide. Bien que
-                l'idée ait germé dans nos esprits, la beauté de ce projet réside
-                dans le soutien et l'adhésion de la communauté qui l'ont
-                propulsé. Le Village des Bébés s'est formé naturellement grâce à
-                l'appui précieux de ceux qui partagent notre vision. En tant que
-                fondateurs, nous croyons en un avenir inclusif et diversifié. Le
-                Village des Bébés n'est pas seulement un lieu, c'est un
-                mouvement vers un soutien mutuel, symbolisant la beauté de la
-                diversité culturelle.
+                Le Village des Bébés n&apos;est pas seulement un projet,
+                c&apos;est une communauté dynamique qui s&apos;est formée
+                naturellement. Grâce à l&apos;implication de chacun, le projet
+                évolue constamment, reflétant l&apos;essence même de la
+                solidarité et de l&apos;entraide. Bien que l&apos;idée ait germé
+                dans nos esprits, la beauté de ce projet réside dans le soutien
+                et l&apos;adhésion de la communauté qui l&apos;ont propulsé. Le
+                Village des Bébés s&apos;est formé naturellement grâce à
+                l&apos;appui précieux de ceux qui partagent notre vision. En
+                tant que fondateurs, nous croyons en un avenir inclusif et
+                diversifié. Le Village des Bébés n&apos;est pas seulement un
+                lieu, c&apos;est un mouvement vers un soutien mutuel,
+                symbolisant la beauté de la diversité culturelle.
               </p>
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold text-darkblue my-7">
