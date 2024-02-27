@@ -7,6 +7,7 @@ const nextConfig = {
       "user-images.githubusercontent.com",
       "source.unsplash.com",
       "unsplash.com",
+      "images.unsplash.com",
     ],
   },
 };
