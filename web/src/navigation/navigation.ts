@@ -72,6 +72,10 @@ const navigation: NavigationItemType[] = [
         name: "Rapport annuel",
         href: "/organization/annual-reports",
       },
+      {
+        name: "Blog",
+        href: "/organization/blog",
+      },
     ],
   },
   { name: "Photos souvenirs", href: "/photos" },

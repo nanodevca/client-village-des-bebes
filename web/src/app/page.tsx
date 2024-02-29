@@ -3,6 +3,7 @@ import { Partners } from "../components/home/partners";
 import { EventsCalendar } from "../components/home/eventsCalendar/index";
 import AboutOrganization from "../components/home/organisationAbout";
 import { BlogPreview } from "../components/home/blogPreview";
+import { ContactForm } from "../components/home/contactForm";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <AboutOrganization />
       <EventsCalendar />
       <BlogPreview />
+      <ContactForm />
     </main>
   );
 }
