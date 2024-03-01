@@ -76,6 +76,10 @@ const navigation: NavigationItemType[] = [
         name: "Blog",
         href: "/organization/blog",
       },
+      {
+        name: "Emploi",
+        href: "/organization/careers",
+      },
     ],
   },
   { name: "Photos souvenirs", href: "/photos" },

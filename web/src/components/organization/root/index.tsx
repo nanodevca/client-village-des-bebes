@@ -4,7 +4,7 @@ import Link from "next/link";
 const OrganizationContent = () => {
   return (
     <>
-      <div className="w-full h-[95rem] lg:h-[60rem] grid grid-rows-6 lg:grid-rows-1 lg:grid-cols-2">
+      <div className="w-full h-[120rem] lg:h-[60rem] grid grid-rows-6 lg:grid-rows-1 lg:grid-cols-2">
         <div className="h-full w-full bg-blue-400 flex items-center justify-center row-span-2 lg:row-span-1 lg:col-span-1">
           <Image
             src="/assets/images/organization/IMG_0005.jpg"
@@ -103,6 +103,40 @@ const OrganizationContent = () => {
                   </div>
                 </div>
               </Link>
+
+              <Link href="/organization/carreers">
+                <div className="relative mb-4 before:content-[''] before:rounded-md before:absolute before:inset-0 before:bg-black before:bg-opacity-20">
+                  <Image
+                    alt=""
+                    width={1000}
+                    height={1000}
+                    className="w-full rounded-lg"
+                    src="/assets/images/organization/formal-wear.jpg"
+                  />
+                  <div className="absolute inset-0 p-2 text-white flex flex-col justify-end">
+                    <div className="relative">
+                      <h1 className="text-2xl font-bold mb-3">Emploi</h1>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+
+              <Link href="/blog">
+                <div className="relative mb-4 before:content-[''] before:rounded-md before:absolute before:inset-0 before:bg-black before:bg-opacity-20">
+                  <Image
+                    alt=""
+                    width={1000}
+                    height={1000}
+                    className="w-full rounded-lg"
+                    src="/assets/images/organization/typing-machine.jpg"
+                  />
+                  <div className="absolute inset-0 p-2 text-white flex flex-col justify-end">
+                    <div className="relative">
+                      <h1 className="text-2xl font-bold mb-3">Blog</h1>
+                    </div>
+                  </div>
+                </div>
+              </Link>
             </div>
           </div>
           <div className="w-full mt-10 px-0 py-1 lg:px-5 lg:py-2 block lg:hidden">
@@ -165,6 +199,32 @@ const OrganizationContent = () => {
                   <h1 className="z-10 text-2xl font-bold text-white">
                     Rapport annuel
                   </h1>
+                </article>
+              </Link>
+              <Link href="/organization/annual-reports">
+                <article className="relative isolate flex flex-col justify-end overflow-hidden rounded-lg py-10 px-5 max-w-sm mx-auto">
+                  <Image
+                    alt=""
+                    width={1000}
+                    height={1000}
+                    className="absolute inset-0 h-full w-full object-cover"
+                    src="/assets/images/organization/formal-wear.jpg"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
+                  <h1 className="z-10 text-2xl font-bold text-white">Emploi</h1>
+                </article>
+              </Link>
+              <Link href="/organization/annual-reports">
+                <article className="relative isolate flex flex-col justify-end overflow-hidden rounded-lg py-10 px-5 max-w-sm mx-auto">
+                  <Image
+                    alt=""
+                    width={1000}
+                    height={1000}
+                    className="absolute inset-0 h-full w-full object-cover"
+                    src="/assets/images/organization/typing-machine.jpg"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
+                  <h1 className="z-10 text-2xl font-bold text-white">Blog</h1>
                 </article>
               </Link>
             </div>

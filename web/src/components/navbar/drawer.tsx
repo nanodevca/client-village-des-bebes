@@ -47,13 +47,15 @@ const Drawer = ({ isOpen, setIsOpen }: DrawerType) => {
       >
         <article className="relative w-270 max-w-lg flex flex-col h-full">
           <header className="px-5 flex items-center justify-between">
-            <Image
-              className="block h-28 w-28 lg:hidden"
-              src={"/assets/images/company/logo.png"}
-              width={112}
-              height={112}
-              alt="le-village-des-bebes"
-            />
+            <Link href={"/"}>
+              <Image
+                className="block h-28 w-28 lg:hidden"
+                src={"/assets/images/company/logo.png"}
+                width={112}
+                height={112}
+                alt="le-village-des-bebes"
+              />
+            </Link>
             <XMarkIcon
               className="block h-6 w-6"
               onClick={() => {
