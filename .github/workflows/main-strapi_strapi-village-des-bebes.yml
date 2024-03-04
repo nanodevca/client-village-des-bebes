@@ -53,7 +53,7 @@ jobs:
           path: ./cms
 
       - name: Unzip artifact for deployment
-        run: unzip release.zip
+        run: unzip release.zip -d ./cms
         working-directory: ./cms
 
       - name: "Deploy to Azure Web App"
