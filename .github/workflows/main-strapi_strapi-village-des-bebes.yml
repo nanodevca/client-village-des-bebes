@@ -50,9 +50,11 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: node-app
+          path: ./cms
 
       - name: Unzip artifact for deployment
         run: unzip release.zip
+        working-directory: ./cms
 
       - name: "Deploy to Azure Web App"
         id: deploy-to-webapp
@@ -61,4 +63,4 @@ jobs:
           app-name: "strapi-village-des-bebes"
           slot-name: "Production"
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E0BA97A34EAE499091B54C551A5FD41C }}
-          package: .
+          package: ./cms
