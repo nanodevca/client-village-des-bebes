@@ -1,8 +1,16 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { BlobCard } from "../../blobCard";
+import { useRecoilValue } from "recoil";
+import { currentLanguageValue } from "@/src/atoms/language";
+import { getTranslation } from "@/src/utils/functions";
+
+const translations = getTranslation();
 
 const AboutUsContent = () => {
+  const currentLang = useRecoilValue(currentLanguageValue);
+
   return (
     <>
       <div className="w-full grid grid-cols-1">
@@ -17,18 +25,36 @@ const AboutUsContent = () => {
             />
             <div className="absolute inset-0 p-6 lg:py-16 lg:px-28 text-white flex flex-col justify-center bg-slate-700 bg-opacity-70">
               <div className="relative">
-                <h1 className="text-lg font-medium mb-4">Qui sommes-nous ?</h1>
+                <h1 className="text-lg font-medium mb-4">
+                  {
+                    translations[currentLang as "en" | "fr"][
+                      "organization-who-are-we"
+                    ]
+                  }
+                </h1>
               </div>
               <div className="relative">
                 <h1 className="text-6xl font-bold mb-4">
-                  Nous sommes <br />
-                  Le Village des Bébés
+                  {
+                    translations[currentLang as "en" | "fr"][
+                      "organization-who-are-we-description-part-1"
+                    ]
+                  }
+                  <br />
+                  {
+                    translations[currentLang as "en" | "fr"][
+                      "organization-who-are-we-description-part-2"
+                    ]
+                  }
                 </h1>
               </div>
               <div className="relative">
                 <h1 className="text-xl font-light mb-4">
-                  Un OBNL qui met la communauté et la famille à la première
-                  place.
+                  {
+                    translations[currentLang as "en" | "fr"][
+                      "organization-who-are-we-description-part-3"
+                    ]
+                  }
                 </h1>
               </div>
             </div>
@@ -40,74 +66,70 @@ const AboutUsContent = () => {
               className="text-4xl lg:text-5xl font-bold text-darkblue mb-7"
               id="story"
             >
-              Notre histoire
+              {
+                translations[currentLang as "en" | "fr"][
+                  "organization-who-are-we-story-title"
+                ]
+              }
             </h2>
             <p className="mb-3 text-gray-500">
-              L&apos;histoire inspirante du Village des Bébés trouve ses racines
-              dans le parcours personnel de <b>Nathalie Khadija Pesin</b>, une
-              entrepreneure passionnée et engagée. Née au Sénégal, Nathalie a
-              été témoin des nombreuses initiatives de sa mère,{" "}
-              <b>Fatou-Marie Ndiaye</b>, spécialiste en économie sociale et
-              familiale.
+              {
+                translations[currentLang as "en" | "fr"][
+                  "organization-who-are-we-story-part-1"
+                ]
+              }
             </p>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
               <p className="mb-3 text-gray-500">
-                C&apos;est lorsque je suis devenue maman que l&apos;idée du
-                village des bébé a commencé à prendre forme. En effet, j&apos;ai
-                ressenti le désir de transmettre ma culture africaine à ma fille
-                dès son plus jeune âge. <br />
-                Ma mère, comme directrice de garderie au Sénégal, organisait
-                fréquemment des activités pour les jeunes enfants, je me
-                souvenais de ses comptines et berceuses racontant
-                l&apos;Afrique, ses poupées noires qu&apos;elle coud elle-même
-                pour raconter ses histoires comme comme l&apos;histoire de
-                Coumba am Ndeye et Coumba Amoul Ndeye (Traduction wolof, Coumba
-                ayant une maman et Coumba sans maman, un conte courant au
-                Sénégal). Mais comment transmettre ces belles histoires à ma
-                fille, comment lui transmettre nos traditions? La faire voyager
-                à travers les sons et sonorités africaines ? Lui faire gouter et
-                découvrir les plats de chez nous ? <br />
-                Au Canada, je ne trouvais pas de milieu assez diversifié pour
-                que ma fille puisse s&apos;amuser en découvrant notre héritage
-                africain. Alors quoi faire ? <br />
-              </p>
-              <p className="mb-3 text-gray-500">
-                Ma réponse je l&apos;avais : Il faut tout un village pour élever
-                un enfant ... pourquoi ne pas rassembler les communautés pour
-                que nous puissions ensemble, partager nos coutumes à nos enfants
-                ! C&apos;est ainsi qu&apos;est né l&apos;histoire du Village des
-                bébés. <br />
+                {
+                  translations[currentLang as "en" | "fr"][
+                    "organization-who-are-we-story-part-2"
+                  ]
+                }
                 <br />
-                Fortes de notre expérience internationale, notamment en France
-                et au Sénégal, nous sommes fières de notre engagement à
-                l&apos;échelle mondiale. Ma mère, forte de plus de 20 ans
-                d&apos;expertise en économie sociale et familiale, a joué un
-                rôle clé dans la création du Village des Bébés. Reconnue pour
-                son leadership et ses valeurs humaines, elle a œuvré en France
-                dans le secteur de la petite enfance et a ouvert la première
-                crèche-garderie au Sénégal. Ma mère a contribué
-                significativement au secteur de la petite enfance, tandis que
-                j&apos;ai été reconnue pour mon leadership au sein de la
-                communauté sénégalaise au Canada.
+                <br />
+                {
+                  translations[currentLang as "en" | "fr"][
+                    "organization-who-are-we-story-part-3"
+                  ]
+                }
+                <br />
               </p>
               <p className="mb-3 text-gray-500">
-                Le Village des Bébés n&apos;est pas seulement un projet,
-                c&apos;est une communauté dynamique qui s&apos;est formée
-                naturellement. Grâce à l&apos;implication de chacun, le projet
-                évolue constamment, reflétant l&apos;essence même de la
-                solidarité et de l&apos;entraide. Bien que l&apos;idée ait germé
-                dans nos esprits, la beauté de ce projet réside dans le soutien
-                et l&apos;adhésion de la communauté qui l&apos;ont propulsé. Le
-                Village des Bébés s&apos;est formé naturellement grâce à
-                l&apos;appui précieux de ceux qui partagent notre vision. En
-                tant que fondateurs, nous croyons en un avenir inclusif et
-                diversifié. Le Village des Bébés n&apos;est pas seulement un
-                lieu, c&apos;est un mouvement vers un soutien mutuel,
-                symbolisant la beauté de la diversité culturelle.
+                {
+                  translations[currentLang as "en" | "fr"][
+                    "organization-who-are-we-story-part-4"
+                  ]
+                }
+                <br />
+                <br />
+                {
+                  translations[currentLang as "en" | "fr"][
+                    "organization-who-are-we-story-part-5"
+                  ]
+                }
+                <br />
+
+                {
+                  translations[currentLang as "en" | "fr"][
+                    "organization-who-are-we-story-part-6"
+                  ]
+                }
+              </p>
+              <p className="mb-3 text-gray-500">
+                {
+                  translations[currentLang as "en" | "fr"][
+                    "organization-who-are-we-story-part-7"
+                  ]
+                }
               </p>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-darkblue my-7">
-              Le conseil d&apos;administration
+            <h2 className="text-4xl lg:text-5xl font-bold text-darkblue my-10">
+              {
+                translations[currentLang as "en" | "fr"][
+                  "organization-who-are-we-administration-title"
+                ]
+              }
             </h2>
             <div className="w-full px-10 py-5 grid grid-cols-1 lg:flex lg:justify-center lg:items-center gap-5">
               <div className="w-72 flex flex-col p-2">
@@ -119,14 +141,21 @@ const AboutUsContent = () => {
                   src="/assets/images/organization/IMG_1924.jpeg"
                 />
                 <h3 className="text-xl mt-3 font-bold text-darkblue text-start">
-                  Nathalie Khadija Pesin
+                  {
+                    translations[currentLang as "en" | "fr"][
+                      "nathalie-khadija-pesin"
+                    ]
+                  }
                 </h3>
-                <p className="text-gray-500 text-start text-lg">Présidente</p>
+                <p className="text-gray-500 text-start text-lg">
+                  {translations[currentLang as "en" | "fr"]["president"]}
+                </p>
                 <Link
                   className="text-darkblue text-start mt-3 underline"
                   href="#"
                 >
-                  LinkedIn {">"}
+                  {translations[currentLang as "en" | "fr"]["linkedin"]}
+                  {">"}
                 </Link>
               </div>
               <div className="w-72 flex flex-col p-2">
@@ -138,16 +167,17 @@ const AboutUsContent = () => {
                   src="https://avatar.tobi.sh/tobiaslins.svg"
                 />
                 <h3 className="text-xl mt-3 font-bold text-darkblue text-start">
-                  Seynabou Ndong
+                  {translations[currentLang as "en" | "fr"]["seynabou-ndong"]}
                 </h3>
                 <p className="text-gray-500 text-start text-lg">
-                  Vice Présidente
+                  {translations[currentLang as "en" | "fr"]["vice-president"]}
                 </p>
                 <Link
                   className="text-darkblue text-start mt-3 underline"
                   href="#"
                 >
-                  LinkedIn {">"}
+                  {translations[currentLang as "en" | "fr"]["linkedin"]}
+                  {">"}
                 </Link>
               </div>
             </div>
@@ -155,39 +185,61 @@ const AboutUsContent = () => {
               className="text-4xl lg:text-5xl font-bold text-darkblue my-7"
               id="team"
             >
-              L&apos;équipe
+              {translations[currentLang as "en" | "fr"]["organization-team"]}
             </h2>
             <div className="w-full px-10 py-5 grid lg:grid-cols-4 grid-cols-1 lg:gap-7 gap-5 justify-center">
               <div className="w-full flex justify-center items-center">
                 <BlobCard
                   image="https://avatar.tobi.sh/tobiaslins.svg"
                   personLink="#"
-                  personName="Rosalie Ndione"
-                  personStatus="Trésorière"
+                  personName={
+                    translations[currentLang as "en" | "fr"]["rosalie-ndione"]
+                  }
+                  personStatus={
+                    translations[currentLang as "en" | "fr"]["treasurer"]
+                  }
                 />
               </div>
               <div className="w-full flex justify-center items-center">
                 <BlobCard
                   image="https://avatar.tobi.sh/tobiaslins.svg"
                   personLink="#"
-                  personName="Abdoul Kaoussar Pindra"
-                  personStatus="Secrétaire"
+                  personName={
+                    translations[currentLang as "en" | "fr"][
+                      "abdoul-kaoussar-pindra"
+                    ]
+                  }
+                  personStatus={
+                    translations[currentLang as "en" | "fr"]["secretary"]
+                  }
                 />
               </div>
               <div className="w-full flex justify-center items-center">
                 <BlobCard
                   image="https://avatar.tobi.sh/tobiaslins.svg"
                   personLink="#"
-                  personName="Ndeye-Khar Thérèse Cissé"
-                  personStatus="Administratrice"
+                  personName={
+                    translations[currentLang as "en" | "fr"][
+                      "ndeye-khar-therese-cisse"
+                    ]
+                  }
+                  personStatus={
+                    translations[currentLang as "en" | "fr"]["administrator"]
+                  }
                 />
               </div>
               <div className="w-full flex justify-center items-center">
                 <BlobCard
                   image="https://avatar.tobi.sh/tobiaslins.svg"
                   personLink="#"
-                  personName="Fatou-Marie Ndiaye"
-                  personStatus="Administratrice"
+                  personName={
+                    translations[currentLang as "en" | "fr"][
+                      "fatou-marie-ndiaye"
+                    ]
+                  }
+                  personStatus={
+                    translations[currentLang as "en" | "fr"]["administrator"]
+                  }
                 />
               </div>
             </div>

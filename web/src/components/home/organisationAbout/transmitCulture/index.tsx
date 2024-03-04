@@ -1,7 +1,13 @@
 import Image from "next/image";
-import Link from "next/link";
+import { useRecoilValue } from "recoil";
+import { currentLanguageValue } from "@/src/atoms/language";
+import { getTranslation } from "@/src/utils/functions";
+
+const translations = getTranslation();
 
 const TransmitCulture = () => {
+  const currentLang = useRecoilValue(currentLanguageValue);
+
   return (
     <>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 flex-col-reverse">
@@ -19,19 +25,18 @@ const TransmitCulture = () => {
         <div className="col-span-6 lg:col-span-7 flex justify-center items-center">
           <div className="flex flex-col align-middle justify-center p-10">
             <p className="text-2xl lg:text-4xl pt-4 font-semibold lh-81 mt-5 text-center lg:text-start">
-              Transmettre la culture
+              {
+                translations[currentLang as "en" | "fr"][
+                  "home-transmit-culture"
+                ]
+              }
             </p>
             <h4 className="text-lg pt-4 font-normal lh-33 text-center lg:text-start text-bluegray">
-              L&apos;idée du Village des Bébés a émergé de mon expérience
-              personnelle en tant que parent d&apos;origine sénégalaise au
-              Canada. J&apos;ai ressenti le besoin de transmettre ma culture
-              africaine à ma fille dès son plus jeune âge, mais j&apos;ai
-              constaté que les ressources et les espaces dédiés à
-              l&apos;éducation culturelle des jeunes enfants, en particulier
-              pour les familles immigrantes, étaient insuffisants. Cette
-              problématique m&apos;a amenée à entreprendre des démarches pour
-              mieux comprendre les besoins non comblés et élaborer des
-              stratégies pour y répondre.
+              {
+                translations[currentLang as "en" | "fr"][
+                  "home-transmit-culture-description"
+                ]
+              }
             </h4>
           </div>
         </div>

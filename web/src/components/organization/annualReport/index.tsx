@@ -1,8 +1,14 @@
+"use client";
 import Image from "next/image";
-import Link from "next/link";
-import { BlobCard } from "../../blobCard";
+import { useRecoilValue } from "recoil";
+import { currentLanguageValue } from "@/src/atoms/language";
+import { getTranslation } from "@/src/utils/functions";
+
+const translations = getTranslation();
 
 const AnnualReportContent = () => {
+  const currentLang = useRecoilValue(currentLanguageValue);
+
   return (
     <>
       <div className="w-full grid grid-cols-1">
@@ -17,13 +23,27 @@ const AnnualReportContent = () => {
             />
             <div className="absolute inset-0 p-6 lg:py-16 lg:px-28 text-white flex flex-col justify-center bg-slate-700 bg-opacity-70">
               <div className="relative">
-                <h1 className="text-6xl font-bold mb-4">Rapport annuel</h1>
+                <h1 className="text-6xl font-bold mb-4">
+                  {
+                    translations[currentLang as "en" | "fr"][
+                      "organization-annual-report"
+                    ]
+                  }
+                </h1>
               </div>
               <div className="relative">
                 <h1 className="text-xl font-light mb-4">
-                  Suivez notre parcours et notre évolution au fil des années.
+                  {
+                    translations[currentLang as "en" | "fr"][
+                      "organization-annual-report-description-part-1"
+                    ]
+                  }
                   <br />
-                  Cela pourrait vous inspirer... ou simplement vous interesser.
+                  {
+                    translations[currentLang as "en" | "fr"][
+                      "organization-annual-report-description-part-2"
+                    ]
+                  }
                 </h1>
               </div>
             </div>
@@ -35,7 +55,11 @@ const AnnualReportContent = () => {
               className="text-4xl lg:text-5xl font-bold text-darkblue mb-7"
               id="story"
             >
-              Récapitulatifs
+              {
+                translations[currentLang as "en" | "fr"][
+                  "organization-annual-report-recap-title"
+                ]
+              }
             </h2>
             <div className="w-full px-10 py-5 grid grid-cols-1 lg:flex lg:justify-center lg:items-center gap-5">
               <div className="w-[30rem] flex flex-col p-4 bg-lilywhite rounded-xl cursor-pointer">
@@ -49,16 +73,18 @@ const AnnualReportContent = () => {
                   />
                   <div className="absolute rounded-xl inset-0 text-white flex flex-col justify-center items-center bg-slate-700 bg-opacity-30 hover:bg-opacity-70 transition-all duration-500">
                     <div className="relative text-center">
-                      <h1 className="text-4xl font-bold mb-4">2023</h1>
+                      <h1 className="text-4xl font-bold mb-4">
+                        {translations[currentLang as "en" | "fr"]["2023"]}
+                      </h1>
                     </div>
                   </div>
                 </div>
                 <p className="text-darkblue text-start text-lg mt-5">
-                  L&apos;année a débuté par des distinctions prestigieuses, des
-                  prix et des récompenses; affirmant notre engagement.
-                  <br /> Le 26 août 2023, notre lancement officiel a souligné
-                  notre dévouement envers notre mission, notre communauté et la
-                  promotion de la culture africaine localement.
+                  {
+                    translations[currentLang as "en" | "fr"][
+                      "organization-annual-report-recap-2023-description"
+                    ]
+                  }
                 </p>
               </div>
             </div>

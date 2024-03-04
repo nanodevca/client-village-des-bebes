@@ -6,14 +6,17 @@ import React, { useEffect } from "react";
 import Drawer from "./drawer";
 import Image from "next/image";
 import { navigation } from "@/src/navigation/navigation";
+import { useRecoilValue } from "recoil";
+import { currentLanguageValue } from "../../atoms/language";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
   const [currentPage, setCurrentPage] = React.useState<string>("");
+  const currentLang = useRecoilValue(currentLanguageValue);
 
   const linksStructure = (): { [key: string]: string[] } => {
     let links = {};
-    navigation.map((item, x) => {
+    navigation(currentLang as "en" | "fr").map((item, x) => {
       links = {
         ...links,
         [item.href]: item.children
@@ -62,7 +65,7 @@ const Navbar = () => {
 
               <div className="hidden lg:block m-auto w-full">
                 <ul className="flex justify-end items-center space-x-2">
-                  {navigation.map((item, x) => (
+                  {navigation(currentLang as "en" | "fr").map((item, x) => (
                     <li key={x} className="group">
                       <Link
                         key={x}

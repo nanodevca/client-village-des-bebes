@@ -1,17 +1,28 @@
+"use client";
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
+import { useRecoilValue } from "recoil";
+import { currentLanguageValue } from "@/src/atoms/language";
+import { getTranslation } from "@/src/utils/functions";
+
+const translations = getTranslation();
 
 const ContactForm = () => {
+  const currentLang = useRecoilValue(currentLanguageValue);
+
   return (
     <>
       <div className="" id="contact-form">
         <div className="mx-auto max-w-2xl py-5 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
           <h3 className="text-3xl lg:text-5xl font-semibold text-left mt-5 lh-81">
-            Ou peut-être nous ecrire quelques mots ?
+            {translations[currentLang as "en" | "fr"]["home-contact-title"]}
           </h3>
           <p className="text-lg lg:text-2xl font-normal text-left text-bluegray mb-3">
-            Nous serons ravis de vous lire et de vous répondre dans les plus
-            brefs délais.
+            {
+              translations[currentLang as "en" | "fr"][
+                "home-contact-description"
+              ]
+            }
           </p>
         </div>
         <div className="container mx-auto px-6">
@@ -83,7 +94,13 @@ const ContactForm = () => {
                         <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
                           <MapPinIcon className="h-4 w-4 inline-block" />
                         </h2>
-                        <p className="mt-1">ADDRESS</p>
+                        <p className="mt-1">
+                          {
+                            translations[currentLang as "en" | "fr"][
+                              "lvdb-adress"
+                            ]
+                          }
+                        </p>
                       </div>
                       <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
                         <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
@@ -93,16 +110,26 @@ const ContactForm = () => {
                           href={"mailto:"}
                           className="leading-relaxed font-bold text-pictonblue text-sm"
                         >
-                          MAIL
+                          {
+                            translations[currentLang as "en" | "fr"][
+                              "lvdb-mail"
+                            ]
+                          }
                         </Link>
                         <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-2">
                           <PhoneIcon className="h-4 w-4 inline-block" />
                         </h2>
                         <Link
-                          href={"tel:+15149627542"}
+                          href={`tel:${translations[currentLang as "en" | "fr"][
+                            "lvdb-phone"
+                          ].replace(/\s/g, "")}`}
                           className="leading-relaxed font-bold text-pictonblue text-sm"
                         >
-                          +1 514-962-7542
+                          {
+                            translations[currentLang as "en" | "fr"][
+                              "lvdb-phone"
+                            ]
+                          }
                         </Link>
                       </div>
                     </div>

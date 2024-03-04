@@ -4,13 +4,16 @@ import Link from "next/link";
 import { navigation } from "@/src/navigation/navigation";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { useEffect, useState } from "react";
+import { useRecoilValue } from "recoil";
+import { currentLanguageValue } from "../../atoms/language";
 
 const Drawer = ({ isOpen, setIsOpen }: DrawerType) => {
   const [currentPage, setCurrentPage] = useState<string>("");
+  const currentLang = useRecoilValue(currentLanguageValue);
 
   const linksStructure = (): { [key: string]: string[] } => {
     let links = {};
-    navigation.map((item, x) => {
+    navigation(currentLang as "en" | "fr").map((item, x) => {
       links = {
         ...links,
         [item.href]: item.children
@@ -68,7 +71,7 @@ const Drawer = ({ isOpen, setIsOpen }: DrawerType) => {
               <div className="flex-1 space-y-4 py-1">
                 <div className="sm:block">
                   <div className="space-y-1 px-5 pt-2 pb-3">
-                    {navigation.map((item, x) => (
+                    {navigation(currentLang as "en" | "fr").map((item, x) => (
                       <button
                         key={x}
                         className="group focus:outline-none w-full h-max"

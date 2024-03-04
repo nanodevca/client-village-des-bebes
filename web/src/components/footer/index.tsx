@@ -9,8 +9,21 @@ import { XIcon } from "../icons/x";
 import { TikTokIcon } from "../icons/tiktok";
 import { YouTubeIcon } from "../icons/youtube";
 import { LinkedInIcon } from "../icons/linkedin";
+import { useRecoilState } from "recoil";
+import { currentLanguage } from "../../atoms/language";
+import { getTranslation } from "@/src/utils/functions";
 
-const footer = () => {
+const translations = getTranslation();
+
+const Footer = () => {
+  const [currentLang, setCurrentLang] = useRecoilState(currentLanguage);
+
+  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setCurrentLang(e.target.value);
+    // Scroll to top of the page
+    window.scrollTo(0, 0);
+  };
+
   return (
     <>
       <footer
@@ -43,25 +56,32 @@ const footer = () => {
                 <div className="flex gap-2">
                   <MapPinIcon className="h-5 w-5 text-offwhite" />
                   <h5 className="text-base font-normal text-offwhite hover:text-pictonblue">
-                    ADDRESS
+                    {translations[currentLang as "en" | "fr"]["lvdb-adress"]}
                   </h5>
                 </div>
                 <div className="flex gap-2 mt-2">
                   <PhoneIcon className="h-5 w-5 text-offwhite" />
                   <h5 className="text-base font-normal text-offwhite hover:text-pictonblue">
-                    <Link href="tel:+1 514-962-7542">+1 514-962-7542</Link>
+                    <Link
+                      href={`tel:${translations[currentLang as "en" | "fr"][
+                        "lvdb-phone"
+                      ].replace(/\s/g, "")}`}
+                      className="text-offwhite hover:text-pictonblue"
+                    >
+                      {translations[currentLang as "en" | "fr"]["lvdb-phone"]}
+                    </Link>
                   </h5>
                 </div>
                 <div className="flex gap-2 mt-2">
                   <EnvelopeIcon className="h-5 w-5 text-offwhite" />
                   <h5 className="text-base font-normal text-offwhite hover:text-pictonblue">
-                    MAIL
+                    {translations[currentLang as "en" | "fr"]["lvdb-mail"]}
                   </h5>
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-8 mt-12 xl:mt-0 xl:col-span-2">
-              <div className="md:grid md:grid-cols-2 md:gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12 xl:mt-0 xl:col-span-2">
+              <div className="grid grid-cols-2 gap-8">
                 <div>
                   <h3
                     className="
@@ -73,26 +93,32 @@ const footer = () => {
                   "
                   >
                     {" "}
-                    Liens rapides{" "}
+                    {
+                      translations[currentLang as "en" | "fr"][
+                        "footer-quick-links-title"
+                      ]
+                    }{" "}
                   </h3>
                   <ul role="list" className="mt-4 space-y-4">
-                    {[navigation.slice(0, 3)].map((links, x) => (
-                      <div key={x}>
-                        {links.map((link, y) => (
-                          <li key={y} className="mb-5">
-                            <Link
-                              href={link.href}
-                              className="text-white text-sm font-normal space-links"
-                            >
-                              {link.name}
-                            </Link>
-                          </li>
-                        ))}
-                      </div>
-                    ))}
+                    {[navigation(currentLang as "en" | "fr").slice(0, 3)].map(
+                      (links, x) => (
+                        <div key={x}>
+                          {links.map((link, y) => (
+                            <li key={y} className="mb-5">
+                              <Link
+                                href={link.href}
+                                className="text-white text-sm font-normal space-links"
+                              >
+                                {link.name}
+                              </Link>
+                            </li>
+                          ))}
+                        </div>
+                      )
+                    )}
                   </ul>
                 </div>
-                <div className="mt-12 md:mt-0">
+                <div className="mt-0">
                   <h3
                     className="
                     text-base
@@ -103,28 +129,34 @@ const footer = () => {
                   "
                   >
                     {" "}
-                    Liens rapides{" "}
+                    {
+                      translations[currentLang as "en" | "fr"][
+                        "footer-quick-links-title"
+                      ]
+                    }{" "}
                   </h3>
                   <ul role="list" className="mt-4 space-y-4">
-                    {[navigation.slice(3)].map((links, x) => (
-                      <div key={x}>
-                        {links.map((link, y) => (
-                          <li key={y} className="mb-5">
-                            <Link
-                              href={link.href}
-                              className="text-white text-sm font-normal space-links"
-                            >
-                              {link.name}
-                            </Link>
-                          </li>
-                        ))}
-                      </div>
-                    ))}
+                    {[navigation(currentLang as "en" | "fr").slice(3)].map(
+                      (links, x) => (
+                        <div key={x}>
+                          {links.map((link, y) => (
+                            <li key={y} className="mb-5">
+                              <Link
+                                href={link.href}
+                                className="text-white text-sm font-normal space-links"
+                              >
+                                {link.name}
+                              </Link>
+                            </li>
+                          ))}
+                        </div>
+                      )
+                    )}
                   </ul>
                 </div>
               </div>
-              <div className="hidden lg:justify-end md:grid md:grid-cols-1">
-                <div className="w-full mt-12 md:mt-0">
+              <div className="lg:justify-end md:grid md:grid-cols-1">
+                <div className="w-full mt-0">
                   <div className="mt-8 lg:justify-end xl:mt-0">
                     <h3
                       className="
@@ -136,14 +168,21 @@ const footer = () => {
                     "
                     >
                       {" "}
-                      Abonnez vous à notre newsletter !{" "}
+                      {
+                        translations[currentLang as "en" | "fr"][
+                          "footer-subscribe-newsletter-title"
+                        ]
+                      }{" "}
                     </h3>
                     <p className="mt-4 text-sm text-gray-500 lg:ml-auto">
                       {" "}
-                      Recevez les dernières nouvelles et mises à jour
-                      directement dans votre boîte de réception.{" "}
+                      {
+                        translations[currentLang as "en" | "fr"][
+                          "footer-subscribe-newsletter-description"
+                        ]
+                      }{" "}
                     </p>
-                    <div className="inline-flex items-center gap-2 list-none lg:ml-auto">
+                    <div className="lg:inline-flex justify-center items-center gap-2 list-none lg:ml-auto w-full">
                       <form
                         action=""
                         method="post"
@@ -160,12 +199,17 @@ const footer = () => {
                         border2
                         bg-lilywhite
                         rounded-xl
-                        sm:max-w-lg sm:flex
+                        w-full
+                        sm:max-w-full sm:flex
                       "
                       >
                         <div className="flex-1 min-w-0 revue-form-group">
                           <label htmlFor="member_email" className="sr-only">
-                            Email address
+                            {
+                              translations[currentLang as "en" | "fr"][
+                                "sign-in-mail-adress"
+                              ]
+                            }
                           </label>
                           <input
                             id="cta-email"
@@ -187,7 +231,11 @@ const footer = () => {
                             focus:outline-none
                             focus:border-transparent
                           "
-                            placeholder="Enter your email  "
+                            placeholder={
+                              translations[currentLang as "en" | "fr"][
+                                "footer-enter-mail-adress"
+                              ]
+                            }
                           />
                         </div>
                         <div className="mt-4 sm:mt-0 sm:ml-3 revue-form-actions">
@@ -213,11 +261,47 @@ const footer = () => {
                           "
                           >
                             {" "}
-                            Ajouter{" "}
+                            {
+                              translations[currentLang as "en" | "fr"]["add"]
+                            }{" "}
                           </button>
                         </div>
                       </form>
                     </div>
+                  </div>
+                </div>
+                <div className="w-full mt-3 flex justify-center lg:justify-end">
+                  <div className="relative bg-lilywhite w-1/2 rounded-xl">
+                    <select
+                      id="language"
+                      name="language"
+                      className="
+                          w-full
+                          px-5
+                          py-3
+                          text-base text-gray-500
+                          placeholder-gray-500
+                          transition
+                          duration-500
+                          ease-in-out
+                          bg-transparent
+                          border border-transparent
+                          rounded-md
+                          focus:outline-none
+                          focus:border-transparent
+                        "
+                      value={currentLang}
+                      onChange={handleLanguageChange}
+                    >
+                      <option value="fr">
+                        🇫🇷&nbsp;
+                        {currentLang === "fr" ? "Français" : "French"}
+                      </option>
+                      <option value="en">
+                        🇬🇧&nbsp;
+                        {currentLang === "en" ? "English" : "Anglais"}
+                      </option>
+                    </select>
                   </div>
                 </div>
               </div>
@@ -291,11 +375,19 @@ const footer = () => {
             <span className="text-offwhite text-sm font-normal mt-2 text-gray-500">
               ©{new Date().getFullYear()} Le Village des Bebés ·{" "}
               <Link href="/" target="_blank" className="text-pictonblue">
-                Politique de confidentialité
+                {
+                  translations[currentLang as "en" | "fr"][
+                    "footer-privacy-policy"
+                  ]
+                }
               </Link>{" "}
               ·{" "}
               <Link href="/" target="_blank" className="text-pictonblue">
-                Conditions d&apos;utilisation
+                {
+                  translations[currentLang as "en" | "fr"][
+                    "footer-terms-and-conditions"
+                  ]
+                }
               </Link>{" "}
               · Made with ♥️ by{" "}
               <Link href="https://nanodev.ca/" target="_blank">
@@ -310,4 +402,4 @@ const footer = () => {
   );
 };
 
-export default footer;
+export default Footer;

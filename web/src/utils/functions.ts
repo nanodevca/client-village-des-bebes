@@ -1,4 +1,5 @@
 import { TZDate } from "@toast-ui/calendar";
+import translations from "@/src/assets/translations/translations.json";
 
 export function clone(date: TZDate): TZDate {
   return new TZDate(date);
@@ -24,3 +25,7 @@ export function subtractDate(d: TZDate, steps: number) {
 
   return date;
 }
+
+export const getTranslation = (): typeof translations => {
+  return translations;
+};

@@ -1,24 +1,29 @@
 "use client";
 import { InvolvedButton } from "../../button/involvedButton";
 import { MemberButton } from "../../button/memberButton";
+import { getTranslation } from "../../../utils/functions";
+import { useRecoilValue } from "recoil";
+import { currentLanguageValue } from "../../../atoms/language";
+
+const translations = getTranslation();
 
 const Banner = () => {
+  const currentLang = useRecoilValue(currentLanguageValue);
+
   return (
     <main>
       <div className="px-6 lg:px-8">
         <div className="mx-auto max-w-6xl pt-16 sm:pt-20 banner-image">
           <div className="text-center flex flex-col items-center justify-center">
             <h1 className="text-4xl font-semibold text-navyblue sm:text-5xl  lg:text-7xl md:4px lh-96">
-              Parce que les parents exemplaires méritent un suivi de qualité.
+              {translations[currentLang as "en" | "fr"]["home-banner-title"]}
             </h1>
             <p className="mt-5 text-xl leading-8 text-bluegray w-4/5">
-              Découvrez une communauté chaleureuse dédiée à
-              l&apos;épanouissement des familles pendant la période de
-              périnatalité et de petite enfance. Notre mission est d&apos;offrir
-              un soutien, des activités enrichissantes et une entraide
-              multiculturelle. Rejoignez-nous dans cette aventure où la
-              solidarité, l&apos;empowerment, et la bienveillance sont nos
-              valeurs fondamentales.
+              {
+                translations[currentLang as "en" | "fr"][
+                  "home-banner-description"
+                ]
+              }
             </p>
           </div>
 
