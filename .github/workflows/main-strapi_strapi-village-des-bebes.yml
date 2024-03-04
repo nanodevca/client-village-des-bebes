@@ -50,11 +50,9 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: node-app
-          path: ./cms
 
       - name: Unzip artifact for deployment
         run: unzip release.zip
-        working-directory: ./cms
 
       - name: "Deploy to Azure Web App"
         id: deploy-to-webapp
