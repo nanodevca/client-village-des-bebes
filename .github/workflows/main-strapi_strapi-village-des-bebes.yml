@@ -99,4 +99,3 @@ jobs:
           slot-name: "Production"
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E0BA97A34EAE499091B54C551A5FD41C }}
           package: .
-          startup-command: "node node_modules/@strapi/strapi/bin/strapi.js start"
