@@ -10,9 +10,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  create-envfile:
-    runs-on: ubuntu-latest
-
   build:
     runs-on: ubuntu-latest
 
