@@ -91,10 +91,6 @@ jobs:
           rm node-app.zip
           ls
 
-      - name: Reinstall dependencies
-        run: |
-          rm -rf node_modules && npm install --production
-
       - name: "Deploy to Azure Web App"
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
@@ -103,3 +99,7 @@ jobs:
           slot-name: "Production"
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E0BA97A34EAE499091B54C551A5FD41C }}
           package: .
+
+      - name: Reinstall dependencies and start
+        run: |
+          rm -rf node_modules && npm install --production && npm run start
