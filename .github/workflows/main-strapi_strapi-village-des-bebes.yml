@@ -15,7 +15,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - run: echo "Current working directory is $PWD"
+      - name: Output the current working directory
+        run: echo "Current working directory is $PWD"
         working-directory: ./cms
 
       - name: Set up Node.js version
@@ -27,11 +28,15 @@ jobs:
         run: |
           npm install
           npm run build --if-present
+        working-directory: ./cms
 
-      - run: |
+      - name: Zip the app
+        run: |
           pwd
           zip -r node-app.zip .
           ls
+        working-directory: ./cms
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
@@ -51,12 +56,14 @@ jobs:
         with:
           name: node-app
 
-      - run: |
+      - name: Unzip and cleanup
+        run: |
           pwd
           ls
           unzip node-app.zip
           rm node-app.zip
           ls
+
       - name: "Deploy to Azure Web App"
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
