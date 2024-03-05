@@ -71,4 +71,4 @@ jobs:
           app-name: "strapi-village-des-bebes"
           slot-name: "Production"
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E0BA97A34EAE499091B54C551A5FD41C }}
-          package: ./cms
+          package: .
