@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       node:
-        image: "node:18.x"
+        image: "node:18.18.2"
         ports:
           - 1337:1337
           - 80:80
@@ -28,7 +28,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: "18.x"
+          node-version: "v18.18.2"
 
       - name: npm install and build
         run: |
