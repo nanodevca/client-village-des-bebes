@@ -12,6 +12,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    services:
+      node:
+        image: "node:18.x"
+        ports:
+          - 1337:1337
+          - 80:80
 
     steps:
       - uses: actions/checkout@v4
