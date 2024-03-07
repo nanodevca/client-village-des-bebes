@@ -1,7 +1,13 @@
+"use client";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { LockClosedIcon, LockOpenIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
+import { useRecoilValue } from "recoil";
+import { currentLanguageValue } from "@/src/atoms/language";
+import { getTranslation } from "@/src/utils/functions";
+
+const translations = getTranslation();
 
 const SignUpModal = ({
   isOpen,
@@ -12,6 +18,8 @@ const SignUpModal = ({
   toggleModal: () => void;
   closeModal: () => void;
 }) => {
+  const currentLang = useRecoilValue(currentLanguageValue);
+
   return (
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-10" onClose={closeModal}>
@@ -50,7 +58,11 @@ const SignUpModal = ({
                         alt="le-village-des-bebes"
                       />
                       <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900">
-                        Connectez vous à votre compte
+                        {
+                          translations[currentLang as "en" | "fr"][
+                            "sign-in-connect"
+                          ]
+                        }
                       </h2>
                     </div>
                     <form className="mt-8 space-y-6" action="#" method="POST">
@@ -62,7 +74,11 @@ const SignUpModal = ({
                       <div className="-space-y-px rounded-md shadow-sm">
                         <div>
                           <label htmlFor="email-address" className="sr-only">
-                            Adresse email
+                            {
+                              translations[currentLang as "en" | "fr"][
+                                "sign-in-mail-adress"
+                              ]
+                            }
                           </label>
                           <input
                             id="email-address"
@@ -71,12 +87,20 @@ const SignUpModal = ({
                             autoComplete="email"
                             required
                             className="relative block w-full appearance-none rounded-none rounded-t-md border border-grey500 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                            placeholder="Adresse email"
+                            placeholder={
+                              translations[currentLang as "en" | "fr"][
+                                "sign-in-mail-adress"
+                              ]
+                            }
                           />
                         </div>
                         <div>
                           <label htmlFor="password" className="sr-only">
-                            Mot de passe
+                            {
+                              translations[currentLang as "en" | "fr"][
+                                "sign-in-password"
+                              ]
+                            }
                           </label>
                           <input
                             id="password"
@@ -85,7 +109,11 @@ const SignUpModal = ({
                             autoComplete="current-password"
                             required
                             className="relative block w-full appearance-none rounded-none rounded-b-md border border-grey500 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                            placeholder="Mot de passe"
+                            placeholder={
+                              translations[currentLang as "en" | "fr"][
+                                "sign-in-password"
+                              ]
+                            }
                           />
                         </div>
                       </div>
@@ -102,7 +130,11 @@ const SignUpModal = ({
                             htmlFor="remember-me"
                             className="ml-2 block text-sm text-gray-900"
                           >
-                            Se souvenir de moi
+                            {
+                              translations[currentLang as "en" | "fr"][
+                                "sign-in-mail-remember-me"
+                              ]
+                            }
                           </label>
                         </div>
 
@@ -111,7 +143,11 @@ const SignUpModal = ({
                             href="#"
                             className="font-medium text-indigo-600 hover:text-indigo-500"
                           >
-                            Mot de passe oublié ?
+                            {
+                              translations[currentLang as "en" | "fr"][
+                                "sign-in-password-forgotten"
+                              ]
+                            }
                           </a>
                         </div>
                       </div>
@@ -127,7 +163,7 @@ const SignUpModal = ({
                               aria-hidden="true"
                             />
                           </span>
-                          Se connecter
+                          {translations[currentLang as "en" | "fr"]["sign-up"]}
                         </button>
                         <button
                           type="button"
@@ -140,7 +176,7 @@ const SignUpModal = ({
                               aria-hidden="true"
                             />
                           </span>
-                          S&lsquo;inscrire
+                          {translations[currentLang as "en" | "fr"]["sign-in"]}
                         </button>
                       </div>
                     </form>
@@ -153,7 +189,11 @@ const SignUpModal = ({
                     className="inline-flex justify-center rounded-md border border-transparent bg-pictonblue-100 px-4 py-2 text-sm font-medium text-pictonblue-900 hover:bg-pictonblue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-pictonblue-500 focus-visible:ring-offset-2"
                     onClick={closeModal}
                   >
-                    Pas encore, merci.
+                    {
+                      translations[currentLang as "en" | "fr"][
+                        "sign-in-not-yet"
+                      ]
+                    }
                   </button>
                 </div>
               </Dialog.Panel>

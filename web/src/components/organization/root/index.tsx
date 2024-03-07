@@ -1,7 +1,15 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useRecoilValue } from "recoil";
+import { currentLanguageValue } from "@/src/atoms/language";
+import { getTranslation } from "@/src/utils/functions";
+
+const translations = getTranslation();
 
 const OrganizationContent = () => {
+  const currentLang = useRecoilValue(currentLanguageValue);
+
   return (
     <>
       <div className="w-full h-[120rem] lg:h-[60rem] grid grid-rows-6 lg:grid-rows-1 lg:grid-cols-2">
@@ -16,17 +24,14 @@ const OrganizationContent = () => {
         </div>
         <div className="h-full w-full row-span-4 lg:row-span-1 lg:col-span-1 p-10">
           <h2 className="font-medium text-4xl text-darkblue ">
-            L&apos;organisation
+            {translations[currentLang as "en" | "fr"]["organization-title"]}
           </h2>
           <p className="mt-4 text-start font-normal text-lg text-darkblue">
-            Le Village des Bébés est une initiative dédiée au soutien des
-            familles et à la préservation de la diversité culturelle. Fondé sur
-            l&apos;expérience personnelle d&apos;un parent, il offre une gamme
-            d&apos;ateliers et d&apos;activités éducatives adaptés aux enfants
-            de 0 à 5 ans. En mettant l&apos;accent sur l&apos;autonomie
-            parentale, ce projet vise à créer un environnement inclusif où les
-            familles peuvent se connecter, apprendre et s&apos;épanouir
-            ensemble.
+            {
+              translations[currentLang as "en" | "fr"][
+                "organization-description"
+              ]
+            }
           </p>
           <div className="w-full mt-5 px-0 py-1 lg:px-5 lg:py-2 hidden lg:block">
             <div className="columns-1 md:columns-3 lg:columns-3">
@@ -42,7 +47,11 @@ const OrganizationContent = () => {
                   <div className="absolute inset-0 p-2 text-white flex flex-col justify-end">
                     <div className="relative">
                       <h1 className="text-2xl font-bold mb-3">
-                        Qui sommes-nous ?
+                        {
+                          translations[currentLang as "en" | "fr"][
+                            "organization-who-are-we"
+                          ]
+                        }
                       </h1>
                     </div>
                   </div>
@@ -61,7 +70,11 @@ const OrganizationContent = () => {
                   <div className="absolute inset-0 p-2 text-white flex flex-col justify-end">
                     <div className="relative">
                       <h1 className="text-2xl font-bold mb-3">
-                        L&apos;histoire
+                        {
+                          translations[currentLang as "en" | "fr"][
+                            "organization-story"
+                          ]
+                        }
                       </h1>
                     </div>
                   </div>
@@ -79,7 +92,13 @@ const OrganizationContent = () => {
                   />
                   <div className="absolute inset-0 p-2 text-white flex flex-col justify-end">
                     <div className="relative">
-                      <h1 className="text-2xl font-bold mb-3">L&apos;équipe</h1>
+                      <h1 className="text-2xl font-bold mb-3">
+                        {
+                          translations[currentLang as "en" | "fr"][
+                            "organization-team"
+                          ]
+                        }
+                      </h1>
                     </div>
                   </div>
                 </div>
@@ -97,7 +116,11 @@ const OrganizationContent = () => {
                   <div className="absolute inset-0 p-2 text-white flex flex-col justify-end">
                     <div className="relative">
                       <h1 className="text-2xl font-bold mb-3">
-                        Rapport annuel
+                        {
+                          translations[currentLang as "en" | "fr"][
+                            "organization-annual-report"
+                          ]
+                        }
                       </h1>
                     </div>
                   </div>
@@ -115,7 +138,13 @@ const OrganizationContent = () => {
                   />
                   <div className="absolute inset-0 p-2 text-white flex flex-col justify-end">
                     <div className="relative">
-                      <h1 className="text-2xl font-bold mb-3">Emploi</h1>
+                      <h1 className="text-2xl font-bold mb-3">
+                        {
+                          translations[currentLang as "en" | "fr"][
+                            "organization-employment"
+                          ]
+                        }
+                      </h1>
                     </div>
                   </div>
                 </div>
@@ -132,7 +161,13 @@ const OrganizationContent = () => {
                   />
                   <div className="absolute inset-0 p-2 text-white flex flex-col justify-end">
                     <div className="relative">
-                      <h1 className="text-2xl font-bold mb-3">Blog</h1>
+                      <h1 className="text-2xl font-bold mb-3">
+                        {
+                          translations[currentLang as "en" | "fr"][
+                            "organization-blog"
+                          ]
+                        }
+                      </h1>
                     </div>
                   </div>
                 </div>
@@ -152,7 +187,11 @@ const OrganizationContent = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
                   <h1 className="z-10 text-2xl font-bold text-white">
-                    Qui sommes-nous ?
+                    {
+                      translations[currentLang as "en" | "fr"][
+                        "organization-who-are-we"
+                      ]
+                    }
                   </h1>
                 </article>
               </Link>
@@ -167,7 +206,11 @@ const OrganizationContent = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
                   <h1 className="z-10 text-2xl font-bold text-white line-clamp-1">
-                    L&apos;histoire
+                    {
+                      translations[currentLang as "en" | "fr"][
+                        "organization-story"
+                      ]
+                    }
                   </h1>
                 </article>
               </Link>
@@ -182,7 +225,11 @@ const OrganizationContent = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
                   <h1 className="z-10 text-2xl font-bold text-white">
-                    L&apos;équipe
+                    {
+                      translations[currentLang as "en" | "fr"][
+                        "organization-team"
+                      ]
+                    }
                   </h1>
                 </article>
               </Link>
@@ -197,7 +244,11 @@ const OrganizationContent = () => {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
                   <h1 className="z-10 text-2xl font-bold text-white">
-                    Rapport annuel
+                    {
+                      translations[currentLang as "en" | "fr"][
+                        "organization-annual-report"
+                      ]
+                    }
                   </h1>
                 </article>
               </Link>
@@ -211,7 +262,13 @@ const OrganizationContent = () => {
                     src="/assets/images/organization/formal-wear.jpg"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
-                  <h1 className="z-10 text-2xl font-bold text-white">Emploi</h1>
+                  <h1 className="z-10 text-2xl font-bold text-white">
+                    {
+                      translations[currentLang as "en" | "fr"][
+                        "organization-employment"
+                      ]
+                    }
+                  </h1>
                 </article>
               </Link>
               <Link href="/organization/annual-reports">
@@ -224,7 +281,13 @@ const OrganizationContent = () => {
                     src="/assets/images/organization/typing-machine.jpg"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
-                  <h1 className="z-10 text-2xl font-bold text-white">Blog</h1>
+                  <h1 className="z-10 text-2xl font-bold text-white">
+                    {
+                      translations[currentLang as "en" | "fr"][
+                        "organization-blog"
+                      ]
+                    }
+                  </h1>
                 </article>
               </Link>
             </div>

@@ -1,8 +1,7 @@
 import "../css/globals.css";
-import { Navbarwrapper } from "../components/navbar/index";
-import Footer from "../components/footer";
 import dynamic from "next/dynamic";
 import type { Metadata, Viewport } from "next";
+import { HomeLayoutContent } from "../components/home/homeLayoutContent";
 
 export const viewport: Viewport = {
   themeColor: "#30B7FF",
@@ -56,9 +55,7 @@ export default function RootLayout({
       </head>
       <body>
         <NoSSR>
-          <Navbarwrapper />
-          {children}
-          <Footer />
+          <HomeLayoutContent>{children}</HomeLayoutContent>
         </NoSSR>
       </body>
     </html>

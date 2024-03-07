@@ -1,91 +1,94 @@
 "use client";
 
 import { NavigationItemType } from "../types/navLinks";
+import { getTranslation } from "../utils/functions";
 
-const navigation: NavigationItemType[] = [
-  { name: "Acceuil", href: "/" },
-  {
-    name: "Activités et Services",
-    href: "/services",
-    children: [
-      {
-        name: "Ateliers prénataux",
-        href: "/services/prenatal-workshops",
-      },
-      {
-        name: "Bien être",
-        href: "/services/well-being",
-      },
-      {
-        name: "Eveil",
-        href: "/services/awakening",
-      },
-      {
-        name: "Alimentation",
-        href: "/services/food",
-      },
-      {
-        name: "Ateliers éducatifs",
-        href: "/services/educational-workshops",
-      },
-      {
-        name: "Causeries",
-        href: "/services/chats",
-      },
-      {
-        name: "Soutien",
-        href: "/services/support",
-      },
-      {
-        name: "Grands évenements",
-        href: "/services/big-events",
-      },
-      {
-        name: "Marraines",
-        href: "/services/godmothers",
-      },
-    ],
-  },
-  {
-    name: "Professionnels",
-    href: "/professionals",
-    children: [
-      {
-        name: "Je suis parent",
-        href: "/professionals/parents",
-      },
-      {
-        name: "Je suis professionnel",
-        href: "/professionals/professionals",
-      },
-    ],
-  },
-  {
-    name: "L'organisation",
-    href: "/organization",
-    children: [
-      {
-        name: "A propos de nous",
-        href: "/organization/about-us",
-      },
-      {
-        name: "Rapport annuel",
-        href: "/organization/annual-reports",
-      },
-      {
-        name: "Blog",
-        href: "/organization/blog",
-      },
-      {
-        name: "Emploi",
-        href: "/organization/careers",
-      },
-    ],
-  },
-  { name: "Photos souvenirs", href: "/photos" },
-  { name: "Contact", href: "/contact" },
-];
+const translations = getTranslation();
 
-const altLinks = [{ name: "Acceuil", href: "/home" }];
+const navigation = (locale: "en" | "fr"): NavigationItemType[] => {
+  return [
+    { name: `${translations[locale]["navbar-home"]}`, href: "/" },
+    {
+      name: `${translations[locale]["navbar-services"]}`,
+      href: "/services",
+      children: [
+        {
+          name: `${translations[locale]["navbar-services-prenatal-workshops"]}`,
+          href: "/services/prenatal-workshops",
+        },
+        {
+          name: `${translations[locale]["navbar-services-well-being"]}`,
+          href: "/services/well-being",
+        },
+        {
+          name: `${translations[locale]["navbar-services-awakening"]}`,
+          href: "/services/awakening",
+        },
+        {
+          name: `${translations[locale]["navbar-services-food"]}`,
+          href: "/services/food",
+        },
+        {
+          name: `${translations[locale]["navbar-services-educational-workshops"]}`,
+          href: "/services/educational-workshops",
+        },
+        {
+          name: `${translations[locale]["navbar-services-chats"]}`,
+          href: "/services/chats",
+        },
+        {
+          name: `${translations[locale]["navbar-services-support"]}`,
+          href: "/services/support",
+        },
+        {
+          name: `${translations[locale]["navbar-services-big-events"]}`,
+          href: "/services/big-events",
+        },
+        {
+          name: `${translations[locale]["navbar-services-godmothers"]}`,
+          href: "/services/godmothers",
+        },
+      ],
+    },
+    {
+      name: `${translations[locale]["navbar-professionals"]}`,
+      href: "/professionals",
+      children: [
+        {
+          name: `${translations[locale]["navbar-professionals-parents"]}`,
+          href: "/professionals/parents",
+        },
+        {
+          name: `${translations[locale]["navbar-professionals-professionals"]}`,
+          href: "/professionals/professionals",
+        },
+      ],
+    },
+    {
+      name: `${translations[locale]["navbar-organization"]}`,
+      href: "/organization",
+      children: [
+        {
+          name: `${translations[locale]["navbar-organization-about"]}`,
+          href: "/organization/about-us",
+        },
+        {
+          name: `${translations[locale]["navbar-organization-annual-reports"]}`,
+          href: "/organization/annual-reports",
+        },
+        {
+          name: `${translations[locale]["navbar-organization-blog"]}`,
+          href: "/organization/blog",
+        },
+        {
+          name: `${translations[locale]["navbar-organization-careers"]}`,
+          href: "/organization/careers",
+        },
+      ],
+    },
+    { name: `${translations[locale]["navbar-photos"]}`, href: "/photos" },
+    { name: `${translations[locale]["navbar-contact"]}`, href: "/contact" },
+  ];
+};
 
-export { navigation, altLinks };
+export { navigation };

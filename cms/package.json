@@ -1,30 +1,38 @@
 {
   "name": "cms",
-  "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application",
-  "scripts": {
-    "develop": "strapi develop",
-    "start": "strapi start",
-    "build": "strapi build",
-    "strapi": "strapi"
-  },
-  "dependencies": {
-    "@strapi/plugin-i18n": "4.14.4",
-    "@strapi/plugin-users-permissions": "4.14.4",
-    "@strapi/strapi": "4.14.4",
-    "better-sqlite3": "8.6.0",
-    "mysql2": "^3.6.2"
-  },
+  "private": true,
+  "description": "Strapi instance for le village des bébés",
+  "license": "MIT",
   "author": {
     "name": "A Strapi developer"
   },
-  "strapi": {
-    "uuid": "07a96516-02d7-4843-9a9b-1f1ac01005d6"
+  "scripts": {
+    "build": "strapi build",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/plugin-cloud": "4.20.0",
+    "@strapi/plugin-graphql": "^4.20.0",
+    "@strapi/plugin-i18n": "4.20.0",
+    "@strapi/plugin-users-permissions": "4.20.0",
+    "@strapi/provider-upload-cloudinary": "^4.20.3",
+    "@strapi/strapi": "4.20.0",
+    "mysql": "2.18.1",
+    "mysql2": "^3.9.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "5.3.4",
+    "sharp": "^0.33.2",
+    "styled-components": "5.3.3"
   },
   "engines": {
-    "node": ">=16.0.0 <=20.x.x",
+    "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "strapi": {
+    "uuid": "ba2d64f8-f111-44fe-8c73-70172c3c9df2"
+  }
 }

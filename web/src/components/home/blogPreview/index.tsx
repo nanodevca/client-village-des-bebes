@@ -1,26 +1,31 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useRecoilValue } from "recoil";
+import { currentLanguageValue } from "@/src/atoms/language";
+import { getTranslation } from "@/src/utils/functions";
+
+const translations = getTranslation();
 
 const BlogPreview = () => {
+  const currentLang = useRecoilValue(currentLanguageValue);
+
   return (
     <>
       <div className="" id="blog-preview">
         <div className="mx-auto max-w-2xl py-5 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
           <h3 className="text-3xl lg:text-5xl font-semibold text-left mt-5 lh-81">
-            Voudrez vous lire nos{" "}
+            {translations[currentLang as "en" | "fr"]["home-blog-title"]}{" "}
             <Link
               href={"/blog"}
               className="bg-gradient-to-r from-pictonblue to-pelorous bg-bottom bg-no-repeat bg-[length:100%_6px] hover:bg-[length:100%_100%] transition-[background-size] px-4 hover:text-white hover:font-bold"
             >
-              articles
+              {translations[currentLang as "en" | "fr"]["articles"]}
             </Link>{" "}
             ?
           </h3>
           <p className="text-lg lg:text-2xl font-normal text-left text-bluegray mb-3">
-            De temps en temps, nous publions des articles concernant
-            l&apos;environnement, la santé, l&apos;éducation, la vie
-            parentale... et bien d&apos;autres sujets. Accès 100% libre !
+            {translations[currentLang as "en" | "fr"]["home-blog-description"]}
           </p>
           <div className="flex justify-center items-center">
             <div className="2xl:mx-auto 2xl:container lg:px-10 lg:py-2 md:py-9 md:px-4 py-9 px-4 w-96 sm:w-auto">

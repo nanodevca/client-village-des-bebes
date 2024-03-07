@@ -1,10 +1,16 @@
 import { useState } from "react";
 import { SignInModal } from "../modal/signIn";
 import { SignUpModal } from "../modal/signUp";
+import { useRecoilValue } from "recoil";
+import { currentLanguageValue } from "@/src/atoms/language";
+import { getTranslation } from "@/src/utils/functions";
+
+const translations = getTranslation();
 
 const MemberButton = () => {
   let [isOpen, setIsOpen] = useState(false);
   let [isSignIn, setIsSignIn] = useState(true);
+  const currentLang = useRecoilValue(currentLanguageValue);
 
   const closeModal = () => {
     setIsOpen(false);
@@ -25,7 +31,7 @@ const MemberButton = () => {
         className="text-lg text-pictonblue transition duration-150 ease-in-out hover:text-white hover:bg-pictonblue font-medium py-5 px-16 border border-lightgrey leafbutton w-full lg:w-auto"
         onClick={openModal}
       >
-        Devenir membre
+        {translations[currentLang as "en" | "fr"]["become-member"]}
       </button>
 
       {isSignIn ? (

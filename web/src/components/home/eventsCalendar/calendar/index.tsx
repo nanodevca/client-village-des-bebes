@@ -10,7 +10,11 @@ import {
 } from "@heroicons/react/20/solid";
 import { calendarTypes } from "@/src/data/calendar/calendarTypes";
 import { calendarEvents } from "@/src/data/calendar/calendarEvents";
-import { calendarViewModeOptions } from "@/src/data/calendar/calendarViews";
+import { useRecoilValue } from "recoil";
+import { currentLanguageValue } from "@/src/atoms/language";
+import { getTranslation } from "@/src/utils/functions";
+
+const translations = getTranslation();
 
 type ViewType = "month" | "week" | "day";
 type actionNameType = "today" | "prev" | "next";
@@ -19,6 +23,22 @@ const CalendarView = ({ view }: { view: ViewType }) => {
   const calendarRef = useRef<typeof Calendar | any>(null);
   const [selectedDateRangeText, setSelectedDateRangeText] = useState("");
   const [selectedView, setSelectedView] = useState(view);
+  const currentLang = useRecoilValue(currentLanguageValue);
+
+  const calendarViewModeOptions = [
+    {
+      title: `${translations[currentLang as "en" | "fr"]["monthly"]}`,
+      value: "month",
+    },
+    {
+      title: `${translations[currentLang as "en" | "fr"]["weekly"]}`,
+      value: "week",
+    },
+    {
+      title: `${translations[currentLang as "en" | "fr"]["daily"]}`,
+      value: "day",
+    },
+  ];
 
   const getCalInstance = useCallback(
     () => calendarRef.current?.getInstance?.(),
@@ -134,7 +154,7 @@ const CalendarView = ({ view }: { view: ViewType }) => {
               className="rounded-lg w-44 h-12 bg-lilywhite text-center text-lg font-semibold text-darkblue flex items-center justify-center"
             >
               <CalendarIcon className="w-6 h-6 mr-2" />
-              Aujourd&apos;hui
+              {translations[currentLang as "en" | "fr"]["today"]}
             </button>
 
             <button
