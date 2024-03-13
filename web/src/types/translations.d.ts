@@ -236,4 +236,6 @@ export type Entry = {
   "activities-service-page-activities-subtitle-part-2"?: string;
   "activities-service-page-activities-subtitle-part-3"?: string;
   "activities-service-page-activities-subtitle-part-4"?: string;
+  free?: string;
+  cad?: string;
 };

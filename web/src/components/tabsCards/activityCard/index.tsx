@@ -6,6 +6,11 @@ import {
   UserGroupIcon,
 } from "@heroicons/react/20/solid";
 import Image from "next/image";
+import { useRecoilValue } from "recoil";
+import { currentLanguageValue } from "@/src/atoms/language";
+import { getTranslation } from "@/src/utils/functions";
+
+const translations = getTranslation();
 
 const ActivityCard = ({
   title,
@@ -16,6 +21,8 @@ const ActivityCard = ({
   public: forPublic,
   index,
 }: Activity) => {
+  const currentLang = useRecoilValue(currentLanguageValue);
+
   return (
     <div
       className={mergeStyle(
@@ -34,7 +41,9 @@ const ActivityCard = ({
         <div className="flex items-center justify-start w-full">
           <span className="text-xs font-medium inline-flex items-center p-2 rounded me-2 bg-emerald-400 text-white">
             <CurrencyDollarIcon className="h-4 w-4 me-1" />
-            {price === 0 ? "FREE" : price + " CAD"}
+            {price === 0
+              ? translations[currentLang as "en" | "fr"]["free"]
+              : price + ` ${translations[currentLang as "en" | "fr"]["cad"]}`}
           </span>
           <span className="text-xs font-medium inline-flex items-center p-2 rounded me-2 bg-emerald-400 text-white">
             <ClockIcon className="h-4 w-4 me-1" />
