@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { navigation } from "@/src/navigation/navigation";
+import { navigation } from "@/src/data/navigation/navigation";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { useEffect, useState } from "react";
 import { useRecoilValue } from "recoil";

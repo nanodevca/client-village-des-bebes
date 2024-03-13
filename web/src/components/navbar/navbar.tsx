@@ -5,7 +5,7 @@ import Link from "next/link";
 import React, { useEffect } from "react";
 import Drawer from "./drawer";
 import Image from "next/image";
-import { navigation } from "@/src/navigation/navigation";
+import { navigation } from "@/src/data/navigation/navigation";
 import { useRecoilValue } from "recoil";
 import { currentLanguageValue } from "../../atoms/language";
 

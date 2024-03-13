@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { navigation } from "@/src/navigation/navigation";
+import { navigation } from "@/src/data/navigation/navigation";
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/20/solid";
 import { FacebookIcon } from "../icons/facebook";
 import { InstagramIcon } from "../icons/instagram";

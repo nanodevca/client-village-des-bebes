@@ -1,5 +1,7 @@
 import { TZDate } from "@toast-ui/calendar";
 import translations from "@/src/assets/translations/translations.json";
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export function clone(date: TZDate): TZDate {
   return new TZDate(date);
@@ -28,4 +30,8 @@ export function subtractDate(d: TZDate, steps: number) {
 
 export const getTranslation = (): typeof translations => {
   return translations;
+};
+
+export const mergeStyle = (...inputs: ClassValue[]) => {
+  return twMerge(clsx(inputs));
 };
