@@ -66,3 +66,22 @@ hr {
 .space-links:hover {
   letter-spacing: 1px;
 }
+
+@keyframes fillUp {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.godmothers-steps:after {
+  content: "";
+  display: inline-block;
+  width: 0%;
+  height: 1px;
+  color: #30b7ff;
+  background-color: #30b7ff; /* Change color as needed */
+  animation: fillUp 20s linear forwards; /* Adjust duration as needed */
+}

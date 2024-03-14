@@ -1,7 +1,7 @@
 "use client";
 
-import { NavigationItemType } from "../types/navLinks";
-import { getTranslation } from "../utils/functions";
+import { NavigationItemType } from "../../types/navLinks";
+import { getTranslation } from "../../utils/functions";
 
 const translations = getTranslation();
 
@@ -11,44 +11,6 @@ const navigation = (locale: "en" | "fr"): NavigationItemType[] => {
     {
       name: `${translations[locale]["navbar-services"]}`,
       href: "/services",
-      children: [
-        {
-          name: `${translations[locale]["navbar-services-prenatal-workshops"]}`,
-          href: "/services/prenatal-workshops",
-        },
-        {
-          name: `${translations[locale]["navbar-services-well-being"]}`,
-          href: "/services/well-being",
-        },
-        {
-          name: `${translations[locale]["navbar-services-awakening"]}`,
-          href: "/services/awakening",
-        },
-        {
-          name: `${translations[locale]["navbar-services-food"]}`,
-          href: "/services/food",
-        },
-        {
-          name: `${translations[locale]["navbar-services-educational-workshops"]}`,
-          href: "/services/educational-workshops",
-        },
-        {
-          name: `${translations[locale]["navbar-services-chats"]}`,
-          href: "/services/chats",
-        },
-        {
-          name: `${translations[locale]["navbar-services-support"]}`,
-          href: "/services/support",
-        },
-        {
-          name: `${translations[locale]["navbar-services-big-events"]}`,
-          href: "/services/big-events",
-        },
-        {
-          name: `${translations[locale]["navbar-services-godmothers"]}`,
-          href: "/services/godmothers",
-        },
-      ],
     },
     {
       name: `${translations[locale]["navbar-professionals"]}`,
