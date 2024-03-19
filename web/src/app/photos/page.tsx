@@ -1,15 +1,34 @@
-import Image from "next/image";
+import { MemoriesContent } from "@/src/components/memories";
+
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/src/components/bottomDrawer";
 
 const Photos = () => {
+  // return <MemoriesContent />;
   return (
-    <div className="h-screen w-screen flex justify-center items-center">
-      <Image
-        src={"/assets/images/company/logo.png"}
-        alt="logo"
-        width={300}
-        height={300}
-      />
-    </div>
+    <Drawer>
+      <DrawerTrigger>Open</DrawerTrigger>
+      <DrawerContent>
+        <DrawerHeader>
+          <DrawerTitle>Are you absolutely sure?</DrawerTitle>
+          <DrawerDescription>This action cannot be undone.</DrawerDescription>
+        </DrawerHeader>
+        <DrawerFooter>
+          <button>Submit</button>
+          <DrawerClose>
+            <button>Cancel</button>
+          </DrawerClose>
+        </DrawerFooter>
+      </DrawerContent>
+    </Drawer>
   );
 };
 
