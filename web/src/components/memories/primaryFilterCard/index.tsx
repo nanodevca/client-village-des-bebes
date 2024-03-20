@@ -30,7 +30,6 @@ const PrimaryFilterCard = ({
       return { ...f, isChecked: false };
     });
     setFilters(updatedFilters);
-    console.log("FILTERSSSSS UPDATED", updatedFilters);
   };
 
   return (
