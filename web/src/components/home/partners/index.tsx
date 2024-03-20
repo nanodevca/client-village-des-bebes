@@ -48,47 +48,56 @@ const Partners = () => {
 
   const partners: partnersType[] = [
     {
-      image: "/assets/partners/centraide_du_grand_montreal.webp",
+      image:
+        "https://res.cloudinary.com/dquixuhcu/image/upload/v1710870566/centraide_du_grand_montreal_203bc6b4cd.webp",
       description: "Centraide du grand montreal",
       url: "https://www.centraide-mtl.org/",
     },
     {
-      image: "/assets/partners/entreprendre_ici.webp",
+      image:
+        "https://res.cloudinary.com/dquixuhcu/image/upload/v1710870568/entreprendre_ici_4e3e72c4cf.webp",
       description: "Entreprendre ici",
       url: "https://entreprendreici.org/",
     },
     {
-      image: "/assets/partners/centre_international_espoir.webp",
+      image:
+        "https://res.cloudinary.com/dquixuhcu/image/upload/v1710870565/centre_international_espoir_5be75f17c5.webp",
       description: "Centre international espoir",
       url: "https://ciespoir.org/",
     },
     {
-      image: "/assets/partners/ecole_entrepreneurs_quebec.webp",
+      image:
+        "https://res.cloudinary.com/dquixuhcu/image/upload/v1710870567/ecole_entrepreneurs_quebec_bb48766d2d.webp",
       description: "École des entrepreneurs du Québec",
       url: "https://eequebec.com/",
     },
     {
-      image: "/assets/partners/CISSSDeLaval.webp",
+      image:
+        "https://res.cloudinary.com/dquixuhcu/image/upload/v1710870566/CISSS_De_Laval_7fee6131ec.webp",
       description: "Centre intégré de santé et de services sociaux de Laval",
       url: "https://www.lavalensante.com/",
     },
     {
-      image: "/assets/partners/defi_osentreprendre.webp",
+      image:
+        "https://res.cloudinary.com/dquixuhcu/image/upload/v1710870566/defi_osentreprendre_4069a058be.webp",
       description: "Défi OSEntreprendre",
       url: "https://www.osentreprendre.quebec/defi-osentreprendre/",
     },
     {
-      image: "/assets/partners/laval_economique.webp",
+      image:
+        "https://res.cloudinary.com/dquixuhcu/image/upload/v1710870568/laval_economique_c840b39d80.webp",
       description: "Laval économique",
       url: "https://lavaleconomique.com/",
     },
     {
-      image: "/assets/partners/mieux_naitre_laval.webp",
+      image:
+        "https://res.cloudinary.com/dquixuhcu/image/upload/v1710870568/mieux_naitre_laval_7bd2cc81eb.webp",
       description: "Mieux naitre à Laval",
       url: "https://www.mieuxnaitre.org/",
     },
     {
-      image: "/assets/partners/pole_regional_economie_sociale_laval.webp",
+      image:
+        "https://res.cloudinary.com/dquixuhcu/image/upload/v1710870568/pole_regional_economie_sociale_laval_b403622530.webp",
       description: "Pôle régional d'économie sociale de Laval",
       url: "https://www.economiesocialelaval.com/",
     },

@@ -46,14 +46,18 @@ const Navbar = () => {
                 <Link href="/">
                   <Image
                     className="block h-full w-full lg:hidden"
-                    src={"/assets/images/company/logo.png"}
+                    src={
+                      "https://res.cloudinary.com/dquixuhcu/image/upload/v1710870348/logo_0b2e1d2d69.png"
+                    }
                     width={100}
                     height={80}
                     alt="le-village-des-bebes"
                   />
                   <Image
                     className="hidden h-full w-full lg:block"
-                    src={"/assets/images/company/logo.png"}
+                    src={
+                      "https://res.cloudinary.com/dquixuhcu/image/upload/v1710870348/logo_0b2e1d2d69.png"
+                    }
                     width={125}
                     height={100}
                     alt="le-village-des-bebes"

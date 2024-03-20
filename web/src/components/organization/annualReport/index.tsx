@@ -19,7 +19,7 @@ const AnnualReportContent = () => {
               width={2560}
               height={1440}
               className="w-full h-full object-cover"
-              src="/assets/images/organization/pile-of-books.jpg"
+              src="https://res.cloudinary.com/dquixuhcu/image/upload/v1710870425/pile_of_books_be61aba92f.jpg"
             />
             <div className="absolute inset-0 p-6 lg:py-16 lg:px-28 text-white flex flex-col justify-center bg-slate-700 bg-opacity-70">
               <div className="relative">
@@ -69,7 +69,7 @@ const AnnualReportContent = () => {
                     width={720}
                     height={720}
                     className="w-full object-cover h-72 rounded-xl"
-                    src="/assets/images/organization/370845146_621391003455866_507568349657303385_n.jpeg"
+                    src="https://res.cloudinary.com/dquixuhcu/image/upload/v1710870420/370845146_621391003455866_507568349657303385_n_8622b620b0.jpg"
                   />
                   <div className="absolute rounded-xl inset-0 text-white flex flex-col justify-center items-center bg-slate-700 bg-opacity-30 hover:bg-opacity-70 transition-all duration-500">
                     <div className="relative text-center">

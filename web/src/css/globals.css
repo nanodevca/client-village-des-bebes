@@ -31,7 +31,7 @@ html:not([data-scroll="0"]) .navbar {
 }
 
 .banner-image {
-  background-image: url("/assets/banner/shapes.svg");
+  background-image: url("https://res.cloudinary.com/dquixuhcu/image/upload/v1710870475/shapes_6ea989a832.svg");
   background-repeat: no-repeat;
   background-position: top;
   background-size: contain;

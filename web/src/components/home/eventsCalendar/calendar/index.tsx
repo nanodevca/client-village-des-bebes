@@ -8,8 +8,8 @@ import {
   ArrowRightCircleIcon,
   CalendarIcon,
 } from "@heroicons/react/20/solid";
-import { calendarTypes } from "@/src/data/calendar/calendarTypes";
-import { calendarEvents } from "@/src/data/calendar/calendarEvents";
+import { calendarTypes } from "@/src/data/homeCalendar/calendarTypes";
+import { calendarEvents } from "@/src/data/homeCalendar/calendarEvents";
 import { useRecoilValue } from "recoil";
 import { currentLanguageValue } from "@/src/atoms/language";
 import { getTranslation } from "@/src/utils/functions";

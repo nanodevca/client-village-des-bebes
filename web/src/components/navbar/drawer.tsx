@@ -53,7 +53,9 @@ const Drawer = ({ isOpen, setIsOpen }: DrawerType) => {
             <Link href={"/"}>
               <Image
                 className="block h-28 w-28 lg:hidden"
-                src={"/assets/images/company/logo.png"}
+                src={
+                  "https://res.cloudinary.com/dquixuhcu/image/upload/v1710870348/logo_0b2e1d2d69.png"
+                }
                 width={112}
                 height={112}
                 alt="le-village-des-bebes"

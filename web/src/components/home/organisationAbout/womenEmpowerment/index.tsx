@@ -34,7 +34,9 @@ const WomenEmpowerment = () => {
         {/* COLUMN-2 */}
         <div className="col-span-6 lg:col-span-5">
           <Image
-            src={"/assets/organizationAbout/women_empowerment.png"}
+            src={
+              "https://res.cloudinary.com/dquixuhcu/image/upload/v1710870527/women_empowerment_e8d86c62d4.png"
+            }
             alt={"Women Empowerment"}
             width={1000}
             height={1000}

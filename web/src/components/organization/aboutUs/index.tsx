@@ -21,7 +21,7 @@ const AboutUsContent = () => {
               width={2560}
               height={1440}
               className="w-full h-full object-cover"
-              src="/assets/images/organization/IMG_0170.jpg"
+              src="https://res.cloudinary.com/dquixuhcu/image/upload/v1710870433/IMG_0170_420371b7c7.jpg"
             />
             <div className="absolute inset-0 p-6 lg:py-16 lg:px-28 text-white flex flex-col justify-center bg-slate-700 bg-opacity-70">
               <div className="relative">
@@ -138,7 +138,7 @@ const AboutUsContent = () => {
                   width={1000}
                   height={1000}
                   className="w-full object-cover h-72 rounded-xl"
-                  src="/assets/images/organization/IMG_1924.jpeg"
+                  src="https://res.cloudinary.com/dquixuhcu/image/upload/v1710870429/IMG_1924_02339c28b4.jpg"
                 />
                 <h3 className="text-xl mt-3 font-bold text-darkblue text-start">
                   {

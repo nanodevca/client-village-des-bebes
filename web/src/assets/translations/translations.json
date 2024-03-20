@@ -233,7 +233,14 @@
     "activities-service-page-activities-subtitle-part-3": "The Village des bébés Godmothers Program aims to create lasting and meaningful bonds between families, thus promoting mutual support and an enriching experience of parenthood.",
     "activities-service-page-activities-subtitle-part-4": "Join us and let a godmother brighten your journey to parenthood!",
     "free": "FREE",
-    "cad": "CAD"
+    "cad": "CAD",
+    "memories-banner-description": "Checkout these amazing memories from some of our previous events and activities.",
+    "memories-subtitle-1": "Welcome to the gallery !",
+    "memories-album-activite-de-conte": "Storytelling activity",
+    "memories-album-festival-mosaique-laval": "Laval Mosaic Festival",
+    "memories-album-baby-village-launch": "Launch of the Village des bébés",
+    "memories-album-black-women-salon": "International Black Women's Fair",
+    "memories-album-all-albums": "Every memories"
   },
   "fr": {
     "2023": "2023",
@@ -469,6 +476,13 @@
     "activities-service-page-activities-subtitle-part-3": "Le Programme de Marrainage au Village des Bébés vise à créer des liens durables et significatifs entre les familles, favorisant ainsi un soutien mutuel et une expérience enrichissante de la parentalité.",
     "activities-service-page-activities-subtitle-part-4": "Rejoignez-nous et laissez une marraine de cœur illuminer votre parcours vers la parentalité !",
     "free": "GRATUIT",
-    "cad": "CAD"
+    "cad": "CAD",
+    "memories-banner-description": "Revivez ces souvenirs incroyables de certains de nos événements et activités précédents.",
+    "memories-subtitle-1": "Visitez notre galerie !",
+    "memories-album-activite-de-conte": "Activité de conte",
+    "memories-album-festival-mosaique-laval": "Festival Mosaïque Laval",
+    "memories-album-baby-village-launch": "Lancement du Village des bébés",
+    "memories-album-black-women-salon": "Salon International de la Femme Noire",
+    "memories-album-all-albums": "Tous les albums"
   }
 }

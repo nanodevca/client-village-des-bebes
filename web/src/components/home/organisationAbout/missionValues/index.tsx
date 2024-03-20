@@ -30,7 +30,9 @@ const MissionValues = () => {
         {/* COLUMN-2 */}
         <div className="col-span-6 lg:col-span-5">
           <Image
-            src={"/assets/organizationAbout/mission_vision.png"}
+            src={
+              "https://res.cloudinary.com/dquixuhcu/image/upload/v1710870527/mission_vision_05c519e821.png"
+            }
             alt={"Organization mission and vision"}
             width={1000}
             height={1000}

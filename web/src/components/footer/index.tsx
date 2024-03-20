@@ -35,7 +35,9 @@ const Footer = () => {
             <div className="space-y-0 xl:col-span-1">
               <div className="w-full flex justify-between items-center">
                 <Image
-                  src={"/assets/images/company/logo.png"}
+                  src={
+                    "https://res.cloudinary.com/dquixuhcu/image/upload/v1710870348/logo_0b2e1d2d69.png"
+                  }
                   width={500}
                   height={500}
                   className="w-28 object-contain"
@@ -43,7 +45,7 @@ const Footer = () => {
                 />
                 <Image
                   src={
-                    "/assets/images/company/sceau-defiOSEntreprendre-laureat-regional-2023.png"
+                    "https://res.cloudinary.com/dquixuhcu/image/upload/v1710870348/sceau_defi_OS_Entreprendre_laureat_regional_2023_4dc09b48c1.png"
                   }
                   width={500}
                   height={500}
