@@ -1,16 +1,7 @@
-import Image from "next/image";
+import { MemoriesContent } from "@/src/components/memories";
 
 const Photos = () => {
-  return (
-    <div className="h-screen w-screen flex justify-center items-center">
-      <Image
-        src={"/assets/images/company/logo.png"}
-        alt="logo"
-        width={300}
-        height={300}
-      />
-    </div>
-  );
+  return <MemoriesContent />;
 };
 
 export default Photos;

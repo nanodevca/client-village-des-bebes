@@ -173,7 +173,7 @@ const GodMothersTabCardContentSubTabOne = ({
               <div className="w-full h-full flex rounded-lg">
                 <Image
                   className="h-auto lg:w-60 flex-none bg-cover rounded-tl-lg rounded-bl-lg object-cover"
-                  src="/assets/images/activities/IMG_0214.jpg"
+                  src="https://res.cloudinary.com/dquixuhcu/image/upload/v1710870279/IMG_0214_cb3afef14e.jpg"
                   width={500}
                   height={500}
                   alt=""

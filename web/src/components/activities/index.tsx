@@ -6,7 +6,7 @@ import { getTranslation } from "@/src/utils/functions";
 import { TabsCards } from "../tabsCards";
 import { TabCard } from "../tabsCards/tabCard";
 import { GodMothersTabCardContent } from "../tabsCards/godMothersTabCardContent";
-import { activities } from "@/src/data/tabs/tabs";
+import { activities } from "@/src/data/activitiesTabs/tabs";
 
 const translations = getTranslation();
 
@@ -167,7 +167,7 @@ const ActivitiesContent = () => {
               width={2560}
               height={1440}
               className="w-full h-full object-cover"
-              src="/assets/images/activities/IMG_0214.jpg"
+              src="https://res.cloudinary.com/dquixuhcu/image/upload/v1710870279/IMG_0214_cb3afef14e.jpg"
             />
             <div className="absolute inset-0 p-6 lg:py-16 lg:px-28 text-white flex flex-col justify-center bg-slate-700 bg-opacity-70">
               <div className="relative">

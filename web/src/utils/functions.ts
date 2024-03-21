@@ -1,5 +1,6 @@
 import { TZDate } from "@toast-ui/calendar";
 import translations from "@/src/assets/translations/translations.json";
+import galleryImages from "@/src/assets/galleryImages/galleryImages.json";
 import { ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -34,4 +35,8 @@ export const getTranslation = (): typeof translations => {
 
 export const mergeStyle = (...inputs: ClassValue[]) => {
   return twMerge(clsx(inputs));
+};
+
+export const getGalleryImagesData = (): typeof galleryImages => {
+  return galleryImages;
 };

@@ -15,7 +15,7 @@ const OrganizationContent = () => {
       <div className="w-full h-[120rem] lg:h-[60rem] grid grid-rows-6 lg:grid-rows-1 lg:grid-cols-2">
         <div className="h-full w-full bg-blue-400 flex items-center justify-center row-span-2 lg:row-span-1 lg:col-span-1">
           <Image
-            src="/assets/images/organization/IMG_0005.jpg"
+            src="https://res.cloudinary.com/dquixuhcu/image/upload/v1710870424/IMG_0005_a6395326a0.jpg"
             alt="Le VDBB"
             width={1920}
             height={1080}
@@ -42,7 +42,7 @@ const OrganizationContent = () => {
                     width={1000}
                     height={1000}
                     className="w-full rounded-lg"
-                    src="/assets/images/organization/IMG_0170.jpg"
+                    src="https://res.cloudinary.com/dquixuhcu/image/upload/v1710870433/IMG_0170_420371b7c7.jpg"
                   />
                   <div className="absolute inset-0 p-2 text-white flex flex-col justify-end">
                     <div className="relative">
@@ -65,7 +65,7 @@ const OrganizationContent = () => {
                     width={1000}
                     height={1000}
                     className="w-full rounded-lg"
-                    src="/assets/images/organization/IMG_5675.jpeg"
+                    src="https://res.cloudinary.com/dquixuhcu/image/upload/v1710870431/IMG_5675_746b231752.jpg"
                   />
                   <div className="absolute inset-0 p-2 text-white flex flex-col justify-end">
                     <div className="relative">
@@ -88,7 +88,7 @@ const OrganizationContent = () => {
                     width={1000}
                     height={1000}
                     className="w-full rounded-lg"
-                    src="/assets/images/organization/IMG_5666.jpeg"
+                    src="https://res.cloudinary.com/dquixuhcu/image/upload/v1710870432/IMG_5666_001d09b47b.jpg"
                   />
                   <div className="absolute inset-0 p-2 text-white flex flex-col justify-end">
                     <div className="relative">
@@ -111,7 +111,7 @@ const OrganizationContent = () => {
                     width={1000}
                     height={1000}
                     className="w-full rounded-lg"
-                    src="/assets/images/organization/pile-of-books.jpg"
+                    src="https://res.cloudinary.com/dquixuhcu/image/upload/v1710870425/pile_of_books_be61aba92f.jpg"
                   />
                   <div className="absolute inset-0 p-2 text-white flex flex-col justify-end">
                     <div className="relative">
@@ -134,7 +134,7 @@ const OrganizationContent = () => {
                     width={1000}
                     height={1000}
                     className="w-full rounded-lg"
-                    src="/assets/images/organization/formal-wear.jpg"
+                    src="https://res.cloudinary.com/dquixuhcu/image/upload/v1710870422/formal_wear_4ccd659463.jpg"
                   />
                   <div className="absolute inset-0 p-2 text-white flex flex-col justify-end">
                     <div className="relative">
@@ -157,7 +157,7 @@ const OrganizationContent = () => {
                     width={1000}
                     height={1000}
                     className="w-full rounded-lg"
-                    src="/assets/images/organization/typing-machine.jpg"
+                    src="https://res.cloudinary.com/dquixuhcu/image/upload/v1710870425/typing_machine_4aa7a6a7d6.jpg"
                   />
                   <div className="absolute inset-0 p-2 text-white flex flex-col justify-end">
                     <div className="relative">
@@ -183,7 +183,7 @@ const OrganizationContent = () => {
                     width={1000}
                     height={1000}
                     className="absolute inset-0 h-full w-full object-cover"
-                    src="/assets/images/organization/IMG_0170.jpg"
+                    src="https://res.cloudinary.com/dquixuhcu/image/upload/v1710870433/IMG_0170_420371b7c7.jpg"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
                   <h1 className="z-10 text-2xl font-bold text-white">
@@ -202,7 +202,7 @@ const OrganizationContent = () => {
                     width={1000}
                     height={1000}
                     className="absolute inset-0 h-full w-full object-cover"
-                    src="/assets/images/organization/IMG_5675.jpeg"
+                    src="https://res.cloudinary.com/dquixuhcu/image/upload/v1710870431/IMG_5675_746b231752.jpg"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
                   <h1 className="z-10 text-2xl font-bold text-white line-clamp-1">
@@ -221,7 +221,7 @@ const OrganizationContent = () => {
                     width={1000}
                     height={1000}
                     className="absolute inset-0 h-full w-full object-cover"
-                    src="/assets/images/organization/IMG_5666.jpeg"
+                    src="https://res.cloudinary.com/dquixuhcu/image/upload/v1710870432/IMG_5666_001d09b47b.jpg"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
                   <h1 className="z-10 text-2xl font-bold text-white">
@@ -240,7 +240,7 @@ const OrganizationContent = () => {
                     width={1000}
                     height={1000}
                     className="absolute inset-0 h-full w-full object-cover"
-                    src="/assets/images/organization/pile-of-books.jpg"
+                    src="https://res.cloudinary.com/dquixuhcu/image/upload/v1710870425/pile_of_books_be61aba92f.jpg"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
                   <h1 className="z-10 text-2xl font-bold text-white">
@@ -259,7 +259,7 @@ const OrganizationContent = () => {
                     width={1000}
                     height={1000}
                     className="absolute inset-0 h-full w-full object-cover"
-                    src="/assets/images/organization/formal-wear.jpg"
+                    src="https://res.cloudinary.com/dquixuhcu/image/upload/v1710870422/formal_wear_4ccd659463.jpg"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
                   <h1 className="z-10 text-2xl font-bold text-white">
@@ -278,7 +278,7 @@ const OrganizationContent = () => {
                     width={1000}
                     height={1000}
                     className="absolute inset-0 h-full w-full object-cover"
-                    src="/assets/images/organization/typing-machine.jpg"
+                    src="https://res.cloudinary.com/dquixuhcu/image/upload/v1710870425/typing_machine_4aa7a6a7d6.jpg"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
                   <h1 className="z-10 text-2xl font-bold text-white">

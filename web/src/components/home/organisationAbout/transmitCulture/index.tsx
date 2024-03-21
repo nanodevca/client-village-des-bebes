@@ -13,7 +13,9 @@ const TransmitCulture = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 flex-col-reverse">
         <div className="col-span-6 lg:col-span-5 order-last lg:order-first">
           <Image
-            src={"/assets/organizationAbout/culture_transmission.png"}
+            src={
+              "https://res.cloudinary.com/dquixuhcu/image/upload/v1710870528/culture_transmission_28124f0719.png"
+            }
             alt={"Transmit Culture"}
             width={1000}
             height={1000}

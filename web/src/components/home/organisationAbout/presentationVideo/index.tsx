@@ -15,12 +15,12 @@ const PresentationVideo = () => {
       <MediaProvider>
         <Poster
           className="vds-poster"
-          src="/assets/images/company/youtube-thumbnail.jpg"
+          src="https://res.cloudinary.com/dquixuhcu/image/upload/v1710870348/youtube_thumbnail_bab15d90ae.jpg"
           alt="Le Village des bébés - Concours de pitch Incubateur Enracine 2023"
         />
       </MediaProvider>
       <DefaultVideoLayout
-        thumbnails="/assets/images/company/youtube-thumbnail.jpg"
+        thumbnails="https://res.cloudinary.com/dquixuhcu/image/upload/v1710870348/youtube_thumbnail_bab15d90ae.jpg"
         icons={defaultLayoutIcons}
         noScrubGesture
       />

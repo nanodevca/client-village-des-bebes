@@ -238,4 +238,11 @@ export type Entry = {
   "activities-service-page-activities-subtitle-part-4"?: string;
   free?: string;
   cad?: string;
+  "memories-banner-description"?: string;
+  "memories-subtitle-1"?: string;
+  "memories-album-activite-de-conte"?: string;
+  "memories-album-festival-mosaique-laval"?: string;
+  "memories-album-baby-village-launch"?: string;
+  "memories-album-black-women-salon"?: string;
+  "memories-album-all-albums"?: string;
 };

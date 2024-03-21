@@ -9,10 +9,13 @@ const nextConfig = {
         console.log("[INFO] Fetching translations...");
         execSync("tsc scripts/fetchTranslations.ts");
         execSync("node scripts/fetchTranslations.js");
-        // We make sure the generated translations are accessible to the app
-        console.log("[INFO] Translations written successfully!");
+        console.log("[INFO] Fetching gallery images...");
+        execSync("tsc scripts/fetchGalleryImages.ts");
+        execSync("node scripts/fetchGalleryImages.js");
+        // We make sure the generated translations and images links are accessible to the app
+        console.log("[INFO] Files written successfully!");
       } catch (error) {
-        console.error("[ERROR] Failed to fetch translations: ", error);
+        console.error("[ERROR] Failed to fetch files content", error);
         process.exit(1);
       }
     }

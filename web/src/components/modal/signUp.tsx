@@ -52,7 +52,9 @@ const SignUpModal = ({
                     <div>
                       <Image
                         className="mx-auto"
-                        src={"/assets/images/company/logo.png"}
+                        src={
+                          "https://res.cloudinary.com/dquixuhcu/image/upload/v1710870348/logo_0b2e1d2d69.png"
+                        }
                         width={150}
                         height={48}
                         alt="le-village-des-bebes"
