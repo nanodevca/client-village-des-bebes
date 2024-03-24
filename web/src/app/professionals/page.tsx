@@ -1,16 +1,7 @@
-import Image from "next/image";
+import { ProfessionalsContent } from "@/src/components/professionals";
 
 const Professionals = () => {
-  return (
-    <div className="h-screen w-screen flex justify-center items-center">
-      <Image
-        src={"/assets/images/company/logo.png"}
-        alt="logo"
-        width={300}
-        height={300}
-      />
-    </div>
-  );
+  return <ProfessionalsContent />;
 };
 
 export default Professionals;

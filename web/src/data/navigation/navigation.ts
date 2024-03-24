@@ -18,11 +18,11 @@ const navigation = (locale: "en" | "fr"): NavigationItemType[] => {
       children: [
         {
           name: `${translations[locale]["navbar-professionals-parents"]}`,
-          href: "/professionals/parents",
+          href: "/professionals#parents",
         },
         {
           name: `${translations[locale]["navbar-professionals-professionals"]}`,
-          href: "/professionals/professionals",
+          href: "/professionals#professionals",
         },
       ],
     },
