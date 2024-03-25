@@ -51,7 +51,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
-        <link rel="icon" href="/assets/images/company/logo.png" />
+        <link
+          rel="icon"
+          href="https://res.cloudinary.com/dquixuhcu/image/upload/v1710870348/logo_0b2e1d2d69.png"
+        />
       </head>
       <body>
         <NoSSR>

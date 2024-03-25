@@ -5,9 +5,13 @@ import Image from "next/image";
 const GalleryImageCard = ({
   className,
   image,
+  imageFullScreenURLUpdater,
+  imageFullScreenToggler,
 }: {
   className?: string;
   image: string;
+  imageFullScreenURLUpdater: (url: string) => void;
+  imageFullScreenToggler: () => void;
 }) => {
   return (
     <div
@@ -15,6 +19,10 @@ const GalleryImageCard = ({
         "w-full h-full rounded-xl cursor-pointer",
         className
       )}
+      onClick={() => {
+        imageFullScreenURLUpdater(image);
+        imageFullScreenToggler();
+      }}
     >
       <div className="rounded-md h-full w-full relative">
         <Image

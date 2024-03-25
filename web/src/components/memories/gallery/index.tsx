@@ -19,7 +19,17 @@ import {
 import { GalleryVideoCard } from "../galleryVideoCard";
 import { currentLanguageValue } from "@/src/atoms/language";
 
-const Gallery = () => {
+const Gallery = ({
+  imageFullScreenURLUpdater,
+  videoFullScreenURLUpdater,
+  imageFullScreenToggler,
+  videoFullScreenToggler,
+}: {
+  imageFullScreenURLUpdater: (url: string) => void;
+  videoFullScreenURLUpdater: (url: string) => void;
+  imageFullScreenToggler: () => void;
+  videoFullScreenToggler: () => void;
+}) => {
   const [actualFilter, setCurrentFilter] = useRecoilState(currentFilter);
   const [actualFilters, setFilters] = useRecoilState<AlbumsFilters>(filters);
   const currentLang = useRecoilValue(currentLanguageValue);
@@ -87,16 +97,24 @@ const Gallery = () => {
                 )}
               >
                 {galleryImages[x]["type"] === "image" ? (
-                  <GalleryImageCard image={galleryImages[x].src} />
+                  <GalleryImageCard
+                    image={galleryImages[x].src}
+                    imageFullScreenToggler={imageFullScreenToggler}
+                    imageFullScreenURLUpdater={imageFullScreenURLUpdater}
+                  />
                 ) : (
-                  <GalleryVideoCard video={galleryImages[x].src} />
+                  <GalleryVideoCard
+                    video={galleryImages[x].src}
+                    videoFullScreenToggler={videoFullScreenToggler}
+                    videoFullScreenURLUpdater={videoFullScreenURLUpdater}
+                  />
                 )}
               </div>
             ))}
           </IsoTopeGrid>
         </div>
         <DrawerFooter className="mt-auto flex justify-center items-center w-full bg-transparent z-50 bottom-5 fixed inset-x-0">
-          <div className="bg-darkblue py-4 px-4 w-max flex flex-row justify-center items-center space-x-3 rounded-full shadow-2xl z-50">
+          <div className="bg-darkblue py-4 px-4 w-max grid grid-cols-2 gap-2 lg:flex lg:flex-row justify-center items-center lg:space-x-3 rounded-2xl lg:rounded-full shadow-2xl z-50">
             <div
               onClick={() => {
                 handleFiltersUpdate("all");
@@ -127,7 +145,7 @@ const Gallery = () => {
                   handleFiltersUpdate(album.tag);
                   handleAlbumChange(album.tag);
                 }}
-                className={`rounded-full w-max h-max px-5 py-4 cursor-pointer ${
+                className={`rounded-full w-[11rem] lg:w-max h-max px-5 py-4 cursor-pointer overflow-hidden ${
                   album.tag === actualFilter ? "bg-pictonblue" : "bg-lilywhite"
                 }`}
               >
@@ -136,7 +154,7 @@ const Gallery = () => {
                     album.tag == actualFilter
                       ? "text-lilywhite font-semibold"
                       : "text-darkblue font-medium"
-                  } text-center text-sm`}
+                  } text-center text-sm truncate`}
                 >
                   {album.name}
                 </p>
