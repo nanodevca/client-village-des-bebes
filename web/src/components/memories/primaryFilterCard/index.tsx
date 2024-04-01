@@ -40,7 +40,7 @@ const PrimaryFilterCard = ({
             handleFiltersUpdate(filterKey);
             handleAlbumChange(filterKey);
           }}
-          className="w-[11rem] lg:w-[15rem] h-full flex space-y-2 flex-col p-4 bg-lilywhite rounded-xl cursor-pointer"
+          className="w-full h-full flex space-y-2 flex-col p-4 bg-lilywhite rounded-xl cursor-pointer"
         >
           <div className="rounded-md h-full w-full relative">
             <Image

@@ -26,7 +26,7 @@ const ActivityCard = ({
   return (
     <div
       className={mergeStyle(
-        "rounded-xl group/bento transition duration-200 shadow-input bg-lilywhite justify-start flex flex-col w-full",
+        "rounded-xl group/bento transition duration-200 shadow-input bg-lilywhite justify-start flex flex-col w-full h-full",
         index === 0 || index === 2 ? "md:col-span-2" : "md:col-span-1"
       )}
     >

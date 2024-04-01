@@ -13,11 +13,11 @@ const ContactForm = () => {
   return (
     <>
       <div className="" id="contact-form">
-        <div className="mx-auto max-w-2xl py-5 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-          <h3 className="text-3xl lg:text-5xl font-semibold text-left mt-5 lh-81">
+        <div className="mx-auto max-w-2xl py-5 px-4 sm:max-w-7xl sm:px-8">
+          <h3 className="text-3xl sm:text-5xl font-semibold text-left mt-5 lh-81">
             {translations[currentLang as "en" | "fr"]["home-contact-title"]}
           </h3>
-          <p className="text-lg lg:text-2xl font-normal text-left text-bluegray mb-3">
+          <p className="text-lg sm:text-2xl font-normal text-left text-bluegray mb-3">
             {
               translations[currentLang as "en" | "fr"][
                 "home-contact-description"
@@ -28,9 +28,9 @@ const ContactForm = () => {
         <div className="container mx-auto px-6">
           <div className="pb-12 md:px-12">
             <div className="container mx-auto xl:px-32">
-              <div className="grid items-center lg:grid-cols-2">
-                <div className="mb-12 md:mt-12 lg:mt-0 lg:mb-0">
-                  <div className="relative z-[1] block rounded-lg bg-lilywhite px-6 py-12 md:px-12 lg:-mr-14 lg:shadow-2xl">
+              <div className="grid items-center sm:grid-cols-2">
+                <div className="mb-12 md:mt-12 sm:mt-0 sm:mb-0">
+                  <div className="relative z-[1] block rounded-lg bg-lilywhite px-6 py-12 md:px-12 sm:-mr-14 sm:shadow-2xl">
                     <div className="relative">
                       <input
                         type="text"
@@ -82,7 +82,7 @@ const ContactForm = () => {
                     </div>
                   </div>
                 </div>
-                <div className="md:mb-12 lg:mb-0">
+                <div className="md:mb-12 sm:mb-0">
                   <div className="relative h-[700px] rounded-xl flex flex-col-reverse py-10 px-20">
                     <iframe
                       src="https://maps.google.com/maps?t=&z=13&ie=UTF8&iwloc=&output=embed"
@@ -90,7 +90,7 @@ const ContactForm = () => {
                       frameBorder="0"
                     ></iframe>
                     <div className="bg-white relative flex flex-wrap py-6 rounded-xl shadow-md">
-                      <div className="lg:w-1/2 px-6">
+                      <div className="sm:w-full px-6">
                         <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
                           <MapPinIcon className="h-4 w-4 inline-block" />
                         </h2>
@@ -102,7 +102,7 @@ const ContactForm = () => {
                           }
                         </p>
                       </div>
-                      <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
+                      <div className="sm:w-full px-6 mt-4 sm:mt-0">
                         <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
                           <EnvelopeIcon className="h-4 w-4 inline-block" />
                         </h2>

@@ -31,8 +31,8 @@ const Footer = () => {
         aria-labelledby="footer-heading"
       >
         <div className="px-5 py-12 mx-auto max-w-7xl lg:py-16 md:px-12 lg:px-20">
-          <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-            <div className="space-y-0 xl:col-span-1">
+          <div className="lg:grid lg:grid-cols-3 lg:gap-8 sm:grid sm:grid-cols-2 sm:gap-16">
+            <div className="space-y-0 lg:col-span-1 col-span-1">
               <div className="w-full flex justify-between items-center">
                 <Image
                   src={
@@ -82,7 +82,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12 xl:mt-0 xl:col-span-2">
+            <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-8 mt-12 lg:mt-0 lg:col-span-2 sm:col-span-1">
               <div className="grid grid-cols-2 gap-8">
                 <div>
                   <h3
@@ -159,7 +159,7 @@ const Footer = () => {
               </div>
               <div className="lg:justify-end md:grid md:grid-cols-1">
                 <div className="w-full mt-0">
-                  <div className="mt-8 lg:justify-end xl:mt-0">
+                  <div className="mt-8 lg:justify-end lg:mt-0">
                     <h3
                       className="
                       text-base
@@ -319,11 +319,11 @@ const Footer = () => {
           border-t border-lilywhite
           max-w-7xl
           sm:px-6
-          md:flex md:items-center md:justify-between
+          lg:flex lg:items-center lg:justify-between
           lg:px-20
         "
         >
-          <div className="flex justify-center mb-8 space-x-6 md:order-last md:mb-0">
+          <div className="flex justify-center mb-8 space-x-6 md:order-last">
             <Link
               href="https://www.linkedin.com/company/le-village-des-b%C3%A9b%C3%A9s/"
               target="_blank"

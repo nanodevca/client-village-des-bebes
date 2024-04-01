@@ -13,11 +13,11 @@ const TabCard = ({
 }) => {
   return (
     <>
-      <div className="w-full overflow-hidden relative h-full rounded-2xl px-7 py-5 text-xl md:text-2xl font-bold bg-navyblue text-lilywhite">
+      <div className="w-full overflow-hidden relative lg:h-[45rem] h-[65rem] sm:h-[60rem] rounded-2xl px-7 py-5 text-xl md:text-2xl font-bold bg-navyblue text-lilywhite">
         <p className="mb-5">{title}</p>
         <div
           className={mergeStyle(
-            "grid md:auto-rows-[19rem] grid-cols-1 md:grid-cols-3 gap-2 max-w-7xl mx-auto",
+            "grid lg:auto-rows-[19rem] grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto",
             className
           )}
         >

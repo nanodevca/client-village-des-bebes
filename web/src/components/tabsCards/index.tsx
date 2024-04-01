@@ -33,10 +33,29 @@ const TabsCards = ({
 
   return (
     <>
-      <div className="h-[20rem] md:h-[45rem] [perspective:1000px] relative b hidden lg:grid grid-cols-5 gap-4 mx-auto w-full items-start justify-start">
+      <div className="h-[60rem] lg:h-[45rem] [perspective:1000px] relative lg:grid lg:grid-cols-5 gap-4 mx-auto w-full items-start justify-start">
         <div
           className={mergeStyle(
-            "flex flex-col items-center justify-center [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full col-span-1",
+            "lg:hidden flex items-center justify-start relative overflow-auto max-w-full w-full p-2 mb-2",
+            containerClassName
+          )}
+        >
+          <select
+            className="bg-navyblue w-full h-[50px] max-w-[75%] sm:max-w-[50%] text-white px-5 rounded-2xl"
+            onChange={(event) => {
+              moveSelectedTabToTop(Number(event.target.value));
+            }}
+          >
+            {propTabs.map((tab, idx) => (
+              <option key={tab.value} value={idx}>
+                {tab.title}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div
+          className={mergeStyle(
+            "lg:flex flex-col hidden items-center justify-center [perspective:1000px] relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full col-span-1",
             containerClassName
           )}
         >

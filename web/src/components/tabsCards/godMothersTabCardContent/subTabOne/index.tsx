@@ -160,7 +160,7 @@ const GodMothersTabCardContentSubTabOne = ({
           return (
             <motion.div
               key={card.id}
-              className="absolute dark:bg-black h-[20rem] w-[40rem] rounded-lg shadow-xl shadow-white/[0.05] flex flex-col justify-between mt-10"
+              className="absolute dark:bg-black sm:h-[20rem] h-[23rem] w-[19rem] sm:w-[40rem] rounded-lg shadow-xl shadow-white/[0.05] flex flex-col justify-between mt-10"
               style={{
                 transformOrigin: "top center",
               }}
@@ -172,7 +172,7 @@ const GodMothersTabCardContentSubTabOne = ({
             >
               <div className="w-full h-full flex rounded-lg">
                 <Image
-                  className="h-auto lg:w-60 flex-none bg-cover rounded-tl-lg rounded-bl-lg object-cover"
+                  className="h-auto hidden md:block md:w-1/2 flex-none bg-cover rounded-tl-lg rounded-bl-lg object-cover"
                   src="https://res.cloudinary.com/dquixuhcu/image/upload/v1710870279/IMG_0214_cb3afef14e.jpg"
                   width={500}
                   height={500}

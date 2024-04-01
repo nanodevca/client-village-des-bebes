@@ -61,8 +61,8 @@ const AnnualReportContent = () => {
                 ]
               }
             </h2>
-            <div className="w-full px-10 py-5 grid grid-cols-1 lg:flex lg:justify-center lg:items-center gap-5">
-              <div className="w-[30rem] flex flex-col p-4 bg-lilywhite rounded-xl cursor-pointer">
+            <div className="w-full py-5 grid grid-cols-1 lg:flex lg:justify-center lg:items-center gap-5">
+              <div className="lg:w-[30rem] w-[20rem] flex flex-col p-4 bg-lilywhite rounded-xl cursor-pointer">
                 <div className="rounded-md h-full w-full relative">
                   <Image
                     alt=""
