@@ -266,4 +266,6 @@ export type Entry = {
   "professionals-professionals-title"?: string;
   "professionals-professionals-description-1"?: string;
   "professionals-professionals-description-2"?: string;
+  "contact-subtitle"?: string;
+  "contact-title"?: string;
 };

@@ -1,16 +1,8 @@
+import { ContactUsContent } from "@/src/components/contact";
 import Image from "next/image";
 
 const Contact = () => {
-  return (
-    <div className="h-screen w-screen flex justify-center items-center">
-      <Image
-        src={"/assets/images/company/logo.png"}
-        alt="logo"
-        width={300}
-        height={300}
-      />
-    </div>
-  );
+  return <ContactUsContent />;
 };
 
 export default Contact;
