@@ -13,8 +13,8 @@ const BlogPreview = () => {
   return (
     <>
       <div className="" id="blog-preview">
-        <div className="mx-auto max-w-2xl py-5 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-          <h3 className="text-3xl lg:text-5xl font-semibold text-left mt-5 lh-81">
+        <div className="mx-auto max-w-2xl py-5 px-4 sm:max-w-7xl sm:px-8">
+          <h3 className="text-3xl sm:text-5xl font-semibold text-left mt-5 lh-81">
             {translations[currentLang as "en" | "fr"]["home-blog-title"]}{" "}
             <Link
               href={"/blog"}
@@ -24,16 +24,16 @@ const BlogPreview = () => {
             </Link>{" "}
             ?
           </h3>
-          <p className="text-lg lg:text-2xl font-normal text-left text-bluegray mb-3">
+          <p className="text-lg sm:text-2xl font-normal text-left text-bluegray mt-6 mb-3">
             {translations[currentLang as "en" | "fr"]["home-blog-description"]}
           </p>
           <div className="flex justify-center items-center">
-            <div className="2xl:mx-auto 2xl:container lg:px-10 lg:py-2 md:py-9 md:px-4 py-9 px-4 w-96 sm:w-auto">
-              <div className="lg:flex items-stretch mt-2">
-                <div className="lg:w-1/2">
-                  <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-2 xl:gap-x-8 gap-x-6 gap-y-4">
+            <div className="2xl:mx-auto 2xl:container sm:px-10 sm:py-2 md:py-9 md:px-4 py-9 px-4 w-96 sm:w-auto">
+              <div className="sm:flex items-stretch mt-2">
+                <div className="sm:w-1/2">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 grid-rows-2 xl:gap-x-8 gap-x-6 gap-y-4">
                     <div
-                      className="w-full h-full relative col-span-1 row-span-1 lg:row-span-2 cursor-pointer"
+                      className="w-full h-full relative col-span-1 row-span-1 sm:row-span-2 cursor-pointer"
                       onClick={() => {}}
                     >
                       <div>
@@ -74,7 +74,7 @@ const BlogPreview = () => {
                       />
                     </div>
                     <div
-                      className="w-full h-full relative col-span-1 row-span-1 lg:row-span-2 cursor-pointer"
+                      className="w-full h-full relative col-span-1 row-span-1 sm:row-span-2 cursor-pointer"
                       onClick={() => {}}
                     >
                       <div>
@@ -159,7 +159,7 @@ const BlogPreview = () => {
                     />
                   </div>
                 </div>
-                <div className="lg:w-1/2 xl:ml-8 lg:ml-4 lg:mt-0 md:mt-6 mt-4 lg:flex flex-col justify-between">
+                <div className="sm:w-1/2 xl:ml-8 sm:ml-4 sm:mt-0 md:mt-6 mt-4 sm:flex flex-col justify-between">
                   <div className="relative cursor-pointer" onClick={() => {}}>
                     <div>
                       <p className="p-5 text-xs font-medium leading-3 text-white absolute top-0 right-0 bg-pelorous rounded-tr-xl rounded-bl-xl">
@@ -203,9 +203,9 @@ const BlogPreview = () => {
                       alt="sitting place"
                     />
                   </div>
-                  <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-2 xl:gap-x-8 gap-x-6 gap-y-4 mt-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 grid-rows-2 xl:gap-x-8 gap-x-6 gap-y-4 mt-4">
                     <div
-                      className="w-full h-full relative col-span-1 row-span-1 lg:row-span-2 cursor-pointer"
+                      className="w-full h-full relative col-span-1 row-span-1 sm:row-span-2 cursor-pointer"
                       onClick={() => {}}
                     >
                       <div>
@@ -246,7 +246,7 @@ const BlogPreview = () => {
                       />
                     </div>
                     <div
-                      className="w-full h-full relative col-span-1 row-span-1 lg:row-span-2 cursor-pointer"
+                      className="w-full h-full relative col-span-1 row-span-1 sm:row-span-2 cursor-pointer"
                       onClick={() => {}}
                     >
                       <div>

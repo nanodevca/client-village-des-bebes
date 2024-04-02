@@ -19,7 +19,7 @@ const AboutOrganization = () => {
           {translations[currentLang as "en" | "fr"]["home-description-title"]}
         </h2>
         <PresentationVideo />
-        <div className="mb-0 lg:mb-14" />
+        <div className="mb-0 sm:mb-14" />
         <MissionValues />
         <TransmitCulture />
         <WomenEmpowerment />

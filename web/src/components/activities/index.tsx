@@ -219,7 +219,7 @@ const ActivitiesContent = () => {
             </p>
           </div>
         </div>
-        <div className="w-full h-auto bg-lilywhite">
+        <div className="w-full h-auto lg:pb-0 sm:pb-16 pb-28 bg-lilywhite">
           <div className="mx-auto max-w-7xl px-4 py-10 lg:px-8">
             <div className="w-full p-5">
               <TabsCards tabs={tabs} />
