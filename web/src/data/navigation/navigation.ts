@@ -39,12 +39,12 @@ const navigation = (locale: "en" | "fr"): NavigationItemType[] => {
           href: "/organization/annual-reports",
         },
         {
-          name: `${translations[locale]["navbar-organization-blog"]}`,
-          href: "/organization/blog",
-        },
-        {
           name: `${translations[locale]["navbar-organization-careers"]}`,
           href: "/organization/careers",
+        },
+        {
+          name: `${translations[locale]["navbar-organization-blog"]}`,
+          href: "/blog",
         },
       ],
     },
